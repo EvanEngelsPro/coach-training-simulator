@@ -1,149 +1,119 @@
-# coach-training-simulator
-Coach Training Simulator
-Context
+# 🎯 Coach Training Simulator
+
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge&logo=checkmark)
+![Stack](https://img.shields.io/badge/Tech_Stack-Vite_%7C_Vanilla_JS_%7C_Express-blue?style=for-the-badge&logo=javascript)
+![AI](https://img.shields.io/badge/AI_Powered-OpenAI_GPT--4-orange?style=for-the-badge&logo=openai)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
+> **Transforming static sales feedback into an active, AI-driven training experience.**
 
-Coach analyzes sales meetings after they happen.
-It transcribes conversations, detects key sales markers, and provides structured feedback.
+Coach analyzes sales meetings to provide feedback. This simulator takes it a step further: it allows sales representatives to **practice** their pitch against an AI client *before* the real meeting, using their specific sales plan as a guide.
 
-However, sales representatives currently have no way to train before their next meeting.
+---
 
-This project explores how Coach could evolve from a passive feedback tool into an active training platform.
+## 🚀 Features
 
-Problem
+### 📊 Performance Dashboard
+A comprehensive overview of your sales skills.
+*   **Radar Chart**: Visualize your performance across all 9 sales markers.
+*   **Gap Analysis**: Automatically identifies missed or weak markers from previous meetings.
+*   **Key Metrics**: Tracks average score, completion rate, and improvement areas.
 
-Today:
+### 🤖 AI Training Simulator
+An interactive role-play environment.
+*   **Realistic Simulation**: Practice against an AI client that reacts to your pitch.
+*   **Adaptive Scenario**: The AI adjusts its responses based on the sales plan context.
+*   **Real-time Feedback**: Get instant scoring (1-5), strength analysis, and actionable advice after every interaction.
 
-sales-plan.json defines what a good sales meeting should look like (9 ordered markers).
+### 📝 Deep Dive Analysis
+*   **Detailed Breakdowns**: View evaluations for every step of the sales plan.
+*   **Meeting Transcripts**: Review past meeting segments with speaker identification.
+*   **History Tracking**: Compare your latest training session against past performance.
 
-meeting-details.json shows what actually happened (6/9 detected markers with scores).
+---
 
-Coach provides post-meeting analysis, but does not help sales reps practice beforehand.
+## 🛠️ Technology Stack
 
-User feedback:
+This project is built with a focus on **performance**, **modularity**, and **clean architecture**.
 
-"I want to train with Coach."
+| Component | Tech | Description |
+| :--- | :--- | :--- |
+| **Frontend** | ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white) ![JS](https://img.shields.io/badge/Vanilla_JS-F7DF1E?style=flat-square&logo=javascript&logoColor=black) | Fast, lightweight, no-framework approach for maximum control. |
+| **Styling** | ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white) | Custom CSS variables, dark theme, glassmorphism design. |
+| **Backend** | ![Node](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white) ![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white) | Proxy server to handle API requests securely. |
+| **AI** | ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white) | GPT-4 / GPT-3.5 Turbo for simulation and evaluation. |
 
-The question becomes:
+---
 
-How can we transform static feedback into an interactive training experience?
+## 🏗️ Architecture
 
-Proposed Solution
+The application follows a modular architecture to ensure separation of concerns:
 
-I built a lightweight Interactive Sales Training Simulator.
+```mermaid
+graph TD
+    A[Data Layer] -->|JSON Files| B(Plan Loader & Meeting Analyzer)
+    B --> C{Training Engine}
+    C -->|State Management| D[UI Layer]
+    C -->|Prompts| E[AI Service]
+    E -->|API Calls| F[Express Proxy]
+    F -->|Secure Request| G[OpenAI API]
+```
 
-The simulator:
+*   **`planLoader`**: Parses the sales plan structure.
+*   **`meetingAnalyzer`**: Identifies skill gaps from past meetings.
+*   **`trainingEngine`**: Manages the simulation state machine.
+*   **`evaluator`**: Handles prompt engineering and scoring logic.
 
-Loads the sales plan as the training blueprint.
+---
 
-Analyzes previous meeting performance.
+## 🏁 Getting Started
 
-Identifies missed or weak markers.
+### Prerequisites
+*   Node.js (v18+)
+*   npm
 
-Guides the sales rep through a simulated conversation.
+### Installation
 
-Evaluates responses in real time.
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/EvanEngelsPro/coach-training-simulator.git
+    cd coach-training-simulator
+    ```
 
-Provides structured feedback per marker.
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
 
-This turns Coach into a continuous improvement engine, not just an analysis tool.
+3.  **Configure Environment**
+    Create a `.env` file in the root directory:
+    ```bash
+    cp .env.example .env
+    ```
+    Add your OpenAI API key:
+    ```env
+    OPENAI_API_KEY=sk-your-api-key-here
+    ```
 
-Product Thinking
+4.  **Run the Application**
+    Start both the frontend and backend servers concurrently:
+    ```bash
+    npm run dev
+    ```
+    *   **Frontend**: `http://localhost:5173`
+    *   **Backend**: `http://localhost:3001`
 
-Key design decisions:
+---
 
-1. Training is Adaptive
+## 🔮 Future Roadmap
 
-Markers are prioritized based on:
+*   [ ] **Voice Mode**: Speak directly to the AI client using Speech-to-Text.
+*   [ ] **Multiple Personas**: Train against different client types (skeptical, enthusiastic, executive).
+*   [ ] **User Accounts**: Persist progress and history across sessions.
+*   [ ] **Custom Plans**: Upload your own sales playbooks.
 
-Missed markers in the last meeting
+---
 
-Low-scoring markers
-
-Remaining steps
-
-This ensures training focuses on real weaknesses.
-
-2. The Sales Plan Becomes the Engine
-
-The sales-plan.json is not just displayed.
-
-It powers:
-
-The simulation structure
-
-The evaluation criteria
-
-The progression logic
-
-The plan becomes a programmable framework for skill development.
-
-3. AI as a Simulation Layer
-
-An LLM is used to:
-
-Simulate realistic client responses
-
-Evaluate the sales rep’s answers
-
-Provide structured feedback
-
-AI is not used as magic — it is constrained by the sales plan definitions.
-
-Architecture Overview
-
-High-level modules:
-
-Sales Plan Loader → Loads and structures markers
-
-Meeting Analyzer → Extracts completed vs missed markers
-
-Training Engine → Orchestrates session flow
-
-Simulation Layer → Generates client responses
-
-Evaluation Layer → Scores and gives feedback
-
-The system is intentionally simple and modular.
-
-Technical Choices
-
-Frontend: [Your chosen stack]
-
-Backend: Lightweight API routes
-
-Data: Provided JSON files (no database for MVP)
-
-AI: LLM used for simulation and scoring
-
-The goal was to prioritize clarity and product logic over infrastructure complexity.
-
-What I Would Build With More Time
-
-Voice-based simulation
-
-Real-time coaching during live meetings
-
-Progress tracking across sessions
-
-Dashboard with skill radar chart
-
-Multi-plan support
-
-Team manager insights
-
-How to Run
-npm install
-npm run dev
-
-
-Add your OpenAI API key in .env.
-
-Final Thoughts
-
-This project is not just about building a feature.
-
-It explores how Coach could evolve from:
-
-Post-meeting feedback
-to
-Continuous sales performance training
+<div align="center">
+  <sub>Built with ❤️ by Evan Engels for the Coach AI Team</sub>
+</div>
