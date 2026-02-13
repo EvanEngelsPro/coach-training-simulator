@@ -72,7 +72,7 @@ export function renderDetails(container) {
 
     const hasEval = ev != null;
     const grade = hasEval ? ev.grade : null;
-    const statusIcon = !hasEval ? '⬜' : grade >= 4 ? '🟢' : grade >= 3 ? '🔵' : grade >= 2 ? '🟡' : '🔴';
+    const statusIcon = !hasEval ? '❌' : grade >= 4 ? '🔵' : grade >= 3 ? '🟢' : grade >= 2 ? '🟡' : '🔴';
     const gradeText = hasEval ? `${grade.toFixed(1)} / 5` : 'Non détecté';
 
     item.innerHTML = `
