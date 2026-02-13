@@ -1,0 +1,912 @@
+��{
+  "meeting": {
+    "title": "FormaPro Conseil ",
+    "category": "Qualification",
+    "created_at": "2025-12-16T12:51:28.830039+00:00",
+    "feedback": "# Analyse du Rendez-vous Commercial\n\n## Informations générales\n- **Commercial** : Pierre Martin\n- **Client** : FormaPro Conseil\n- **Type** : Démo\n- **Durée** : ~47 minutes\n\n## Résumé exécutif\n\nPierre Martin a présenté SalesAI, une solution d'IA pour l'accompagnement des équipes commerciales terrain. Le client de FormaPro Conseil, société de consulting en efficacité commerciale, cherche une solution pour industrialiser l'analyse des entretiens commerciaux. La démo a été concluante et un second rendez-vous est prévu le 7 janvier à Lyon.\n\n## Points clés de la présentation\n\n### 1. **Présentation de SalesAI**\n- Application mobile pour commerciaux terrain (pas de visio)\n- Enregistrement et analyse automatique des rendez-vous\n- Spécialisation par client avec leur méthode de vente\n- Tableau de bord pour managers et application mobile pour commerciaux\n\n### 2. **Fonctionnalités principales**\n- **Enregistrement** : Via application mobile, gestion automatique des interruptions\n- **Analyse** : Transcription, notation selon la trame commerciale, identification des points de passage\n- **Coaching** : Feedback personnalisé, axes d'amélioration, préparation des prochains RDV\n- **Suivi managérial** : Tableaux de bord, évolution des performances, identification des axes de formation\n\n### 3. **Processus d'implémentation**\n- Semaine 1 : Spécialisation de l'IA avec la méthode client\n- Semaine 2 : Formation des équipes (2h commerciaux, 1h managers)\n- Semaines 3-4 : Ajustements selon feedbacks\n- Semaines 5-8 : Phase de test et mesure des KPIs\n\n## Besoins identifiés du client\n\n1. **Industrialiser** leur approche actuelle (bricolage avec Otter + ChatGPT)\n2. **Multi-clients** : Besoin d'une solution adaptable à différents clients\n3. **Deux cas d'usage** :\n   - Formation : Analyse des role-plays\n   - Accompagnement long terme : Suivi post-formation des commerciaux\n\n## Points forts de la solution SalesAI\n\n- ✅ Adaptation terrain (pas besoin de connexion internet pendant l'enregistrement)\n- ✅ Conformité RGPD et AI Act européen\n- ✅ Personnalisation complète selon les méthodes clients\n- ✅ ROI mesurable (connexion performance/méthode)\n- ✅ Assistant IA \"Atlas\" pour préparation et analyse\n\n## Prochaines étapes\n\n1. **Rendez-vous le 7 janvier 2025** à 14h à Lyon (un espace de coworking)\n2. **Participants** : Pierre Martin + Marc Dubois (fondateur FormaPro)\n3. **Objectifs** :\n   - Définir le modèle de collaboration (marque blanche évoquée)\n   - Structurer l'offre commerciale\n   - Identifier les premiers clients pilotes\n\n## Opportunité commerciale\n\n- **Potentiel** : Élevé - FormaPro a déjà des clients intéressés\n- **Type de deal** : Partenariat/Marque blanche plutôt que vente directe\n- **Volume** : Multiple clients via FormaPro\n- **Timing** : Court terme (besoins immédiats identifiés)\n\n## Points d'attention\n\n- Le client souhaite une solution flexible pour plusieurs clients différents\n- Importance du pricing adapté au modèle de distribution\n- Nécessité de bien définir le support et la formation pour un modèle indirect"
+  },
+  "evaluations": [
+    {
+      "marker": "Introduction personnelle",
+      "grade": 2.0,
+      "comment": null
+    },
+    {
+      "marker": "Présentation client",
+      "grade": 1.0,
+      "comment": null
+    },
+    {
+      "marker": "Découverte client",
+      "grade": 3.0,
+      "comment": "Bon ratio d'écoute et identification claire du besoin d'industrialisation. Cependant, ta découverte manque de profondeur : tu n'as pas quantifié l'impact du bricolage actuel (volume, coût, urgence) ni exploré les critères de choix partenaire. Le client a mené 80% de la découverte lui-même - creuse davantage avec des questions ciblées."
+    },
+    {
+      "marker": "Problématiques du secteur",
+      "grade": 2.0,
+      "comment": "Bonne identification des problématiques sectorielles. Cependant, tu restes trop dans le générique sans créer de lien personnel avec ton interlocuteur consulting/formation. • Manque de transition depuis ses enjeux spécifiques vers tes exemples • Aucune donnée marché ou stat d'impact pour créer l'urgence • Zéro anecdote concrète de son secteur pour illustrer tes propos • Pas de tension positive : il doit se sentir piqué, pas juste informé."
+    },
+    {
+      "marker": "Présentation Coach",
+      "grade": 3.0,
+      "comment": "Bonne structure avec les 3 étapes et l'explication IA par réseau, c'est clair ! Mais tu bascules trop vite en démo sans créer l'envie : manque d'exemples concrets (+30% de performance), pas de lien explicite avec ses enjeux d'industrialisation, et ton discours reste descriptif au lieu de montrer ce que ça va concrètement changer pour lui."
+    },
+    {
+      "marker": "Clôture et planification prochain rdv",
+      "grade": 5.0,
+      "comment": null
+    }
+  ],
+  "transcript": [
+    {
+      "speaker": "commercial",
+      "start_ms": 36660,
+      "end_ms": 37140,
+      "text": "Bonjour."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 48300,
+      "end_ms": 49680,
+      "text": "Voilà, est-ce que vous m'entendez?"
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 49800,
+      "end_ms": 51540,
+      "text": "Oui, je vous entends. Vous m'entendez bien?"
+    },
+    {
+      "speaker": "client",
+      "start_ms": 52260,
+      "end_ms": 54900,
+      "text": "Oui, très bien. Maintenant, je veux juste... et là, ça marche."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 54960,
+      "end_ms": 56160,
+      "text": "Oui, je vous vois maintenant, très bien."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 57060,
+      "end_ms": 58260,
+      "text": "Ça y est, tout y est."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 58980,
+      "end_ms": 61740,
+      "text": "Enchanté, merci d'avoir pris le rendez-vous."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 64140,
+      "end_ms": 70980,
+      "text": "Merci d'être là. Allez, dites-moi."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 73920,
+      "end_ms": 119460,
+      "text": "Très bien. Alors, généralement, comment on veut qu'on a qu'une demi-heure? Le premier appel est généralement très court et très concis. Moi, déjà, aussi, dans un premier temps, j'aimerais bien savoir comment est-ce que vous nous avez trouvés, sous quels moyens, sur quel canal. Et ensuite, je me présente rapidement, vous vous présentez aussi pour faire connaissance. Et après, je vous parle de SalesAI en fonction de vos besoins. J'ai vu un peu, j'ai regardé un peu votre parcours sur LinkedIn, donc j'ai fait un peu mes devoirs en amont. Mais évidemment, j'aurais quelques questions de pourquoi vous avez pris ce call et comment est-ce qu'on peut s'aider, comment on peut avancer. Et après, je vous présenterai rapidement, j'ai une présentation pour SalesAI et voire même une démo si on a le temps de tout faire. Est-ce que ça vous va?"
+    },
+    {
+      "speaker": "client",
+      "start_ms": 119520,
+      "end_ms": 120060,
+      "text": "Très bien, c'est top."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 120120,
+      "end_ms": 120300,
+      "text": "Oui."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 120540,
+      "end_ms": 120720,
+      "text": "Okay."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 120900,
+      "end_ms": 121260,
+      "text": "Bon programme."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 121500,
+      "end_ms": 172380,
+      "text": "Alors, moi, c'est très, très simple. Donc, vous avez fait les devoirs maison, donc vous voyez qu'on fait du consulting, formation, accompagnement des entreprises dans l'efficacité commerciale. Et évidemment, on écrit des méthodes de vente, on fait tous ces accompagnements. Et votre solution me semble forte, intéressante pour développer, pour accompagner. Parce que si j'ai bien compris, si j'ai bien compris, on peut faire des enregistrements, des échanges, et ensuite les nourrir par les méthodes qui étaient prédéfinies pour ensuite analyser ensemble avec le commercial ou peut-être aussi les managers à quel point, on va dire, il y a des axes d'amélioration ou ce qui est bien maîtrisé ou il faut impacter pour les formations, etc. Est-ce que c'est ça?"
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 172680,
+      "end_ms": 278160,
+      "text": "C'est très bien résumé. Je ne sais pas si j'ai vraiment besoin de faire la présentation. Oui, c'est exactement ça ce qu'on fait, d'où le nom SalesAI qu'on a choisi. Mais on est vraiment parti du principe de : on a essayé de résoudre le problème de suivi et de formation continue chez les commerciaux de terrain. Donc, on est vraiment concentré sur les équipes commerciales terrain, donc vente physique. C'est-à-dire qu'on n'a pas, nous, dans notre outil, on n'a pas d'intégration à Zoom ou à Google Meet ou quoi. C'est une application qu'ils mettent sur leur téléphone et qu'ils accompagnent sur le terrain. Donc, on a beaucoup d'agences, enfin de réseaux B2C qui font de la rénovation de l'habitat. On a aussi pas mal de B2B, mais pareil, qui font de la vente en physique. Donc, on a du retail, par exemple, mais on a aussi pas mal de ventes, en fait, des chefs de chantier qui vont vendre sur le chantier. On est vraiment pas mal dans la rénovation de l'habitat. Et sinon, on a des gros comme des secteurs dans l'alarme, des choses comme ça. Mais on est très spécifiques là-dessus. Et vous l'avez bien dit, nous, c'est vraiment capter une donnée qui n'était pas captée sur le terrain avant pour répondre à tous ces enjeux de nos clients qui sont souvent baisse du chiffre d'affaires ou du moins du manque à gagner parce que la méthode n'est pas suivie. Tout ce qui a été mis en place, il n'y a pas forcément un retour sur investissement des formations et de tous les entraînements qui leur sont faits parce qu'il n'y a aucun suivi sur le terrain. Donc, il y a forcément un manque à gagner. Donc, il n'y a pas de suivi, il ne savent pas si la trame commerciale, si les commerciaux utilisent vraiment tous les outils, toutes les formations. Et dans un deuxième temps, c'est vraiment pour aider aussi le commercial à gagner du temps, à en fait faire les comptes rendus lui-même pour qu'il prenne un peu de recul. Donc, c'est vraiment l'assistant du commercial quand il est en vente."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 279180,
+      "end_ms": 281280,
+      "text": "Okay. Donc, c'est un enregistrement vocal."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 281760,
+      "end_ms": 282060,
+      "text": "C'est ça."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 282900,
+      "end_ms": 293940,
+      "text": "D'accord. Et cette analyse, c'est par rapport à quoi? On peut intégrer une méthode de vente, un script, des étapes?"
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 294180,
+      "end_ms": 306840,
+      "text": "Absolument. Je vais vous montrer directement. Attendez-vous à ce que je partage mon écran. Non, ça, je ne vais pas vous montrer. Pardon. Je vais juste me connecter au compte test. Je vous montre tout de suite."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 307500,
+      "end_ms": 312600,
+      "text": "Et si j'ai bien vu, parce que j'ai fait un tout petit peu de devoirs maison aussi, donc c'est vous le fondateur?"
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 312900,
+      "end_ms": 346380,
+      "text": "Oui, c'est ça. Bon, généralement, en plus, vous allez voir dans mes quand je fais un premier rendez-vous, on commence toujours par là. Vu que vous aviez déjà le contexte, j'ai un peu bypassé. Mais oui, pour la petite histoire de la genèse de SalesAI, ce n'est pas anodin. On est trois cofondateurs. Et comment on s'est retrouvés à faire de l'IA pour les commerciaux, pour les équipes commerciales? C'est que moi, je n'ai à la base rien à voir. J'étais footballeur. Donc, d'ailleurs, j'ai vu que vous étiez à une ville de l'Est, c'est ça, vous étiez un peu à la moitié allemande, à la moitié française. Et après, j'ai eu la chance, par exemple, de partir aux États-Unis faire des études d'informatique, donc de AI."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 346500,
+      "end_ms": 347100,
+      "text": "Des écoles."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 347160,
+      "end_ms": 460800,
+      "text": "C'est ça, AI, data science. Mais j'ai créé une boîte qui s'appelait MedTech Lyon. Donc, je suis revenu en France entre-temps avec mon associé Pierre, qui est aussi mon frère. Et MedTech Lyon, c'était purement on vendait un logiciel aux pharmacies. Donc, c'était du B2B, mais en vente directe. Et ça a aidé les pharmacies pendant le COVID à gérer le flux de données patients qui faisaient les tests COVID chez eux. Et en 14 mois, on a fait près de 4 millions de chiffres. Moi, j'avais 18, 19 ans, mais on avait surtout une force commerciale de 40 commerciaux, oui, de 40 commerciaux qu'on a nous-mêmes. Du coup, j'étais un peu en fonction de directeur commercial. Donc, je recrutais, je formais et j'essayais de suivre ces commerciaux sur le terrain, avec toute la complexité qu'il y a. Et j'avais déjà fait appel, moi, je leur demandais d'enregistrer leurs débats pour un peu les suivre, mais bon, ce n'était pas du tout optimisé. J'avais des heures et des heures d'enregistrement qui, à la fin, je n'écoutais pas trop. Mais du coup, on a eu cette expérience-là. Et ensuite, on a créé une autre boîte qui s'appelait DataFlow, tu vois, avec mon frère, qui là était purement AI, qui était purement c'était aux États-Unis. Et ça, on a réussi à la revendre au mois de mars dernier. Bon, pas énormément, mais assez pour rentrer en France et se lancer dans SalesAI, qui, pour être honnête, ce n'est pas une invention qu'on a eue. C'est déjà existant aux États-Unis, cet accompagnement des commerciaux avec des boîtes comme FieldPro ou SalesTech, si vous avez déjà entendu parler. Nous, on a vu qu'il n'y avait aucune offre adaptée au marché européen, donc avec évidemment les questions de RGPD, de AI Act, de sécurisation des données, et ni même adaptée à la culture managériale et des commerciaux en France. Donc, on a un peu twisté ça, on est rentrés en France et on a fait ça. Donc là, maintenant, on est en train de se développer. Mais on est trois cofondateurs à la base et là, maintenant, on s'étend. On a commencé il y a six mois tout juste, mais maintenant, on arrive à avoir des beaux réseaux et à grossir en dehors même de la France pour l'instant. On est en Europe."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 462420,
+      "end_ms": 462720,
+      "text": "Okay."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 463020,
+      "end_ms": 467520,
+      "text": "Donc voilà. Et là, vous aviez une question avant, c'était : sur quoi on peut ?"
+    },
+    {
+      "speaker": "client",
+      "start_ms": 468120,
+      "end_ms": 471180,
+      "text": "À quel point c'est modifiable et personnalisable ?"
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 471420,
+      "end_ms": 475680,
+      "text": "Exactement. Là, vous avez donc mon compte test. Donc ça, c'est pour faire la démo."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 475860,
+      "end_ms": 486660,
+      "text": "Excusez-moi, est-ce que vous enregistrez cette conversation ? Parce que ça, ça m'intéresse beaucoup, ce descriptif technique. Est-ce que moi, je pourrais le faire directement ? Je ne sais même pas."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 487860,
+      "end_ms": 493500,
+      "text": "Ça, vous n'allez pas pouvoir le faire, mais je peux enregistrer. Je vous enverrai le compte rendu directement à l'instant."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 493680,
+      "end_ms": 495180,
+      "text": "Je veux bien le faire."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 495240,
+      "end_ms": 507960,
+      "text": "Alors là, petite précision, là, vous avez l'écran de mon ordinateur. Donc là, c'est le tableau de bord auquel vous avez accès. Normalement, c'est une application, mais je veux juste vous montrer rapidement, c'est plus simple, c'est plus lisible sur l'ordinateur."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 508020,
+      "end_ms": 513960,
+      "text": "C'est une application, c'est le téléphone des commerciaux, mais le pilote, il a une vision globale."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 514140,
+      "end_ms": 559260,
+      "text": "Exactement. Le manager ou celui du moins qui est responsable du suivi, lui, il a l'accès au tableau de bord, qui est bien plus pratique. Là, vous avez directement ce que sur l'application aussi, le commercial a accès à ça. C'est l'ensemble de ses rendez-vous, donc il va enregistrer et qui vont être analysés. Là, ici, la catégorie, c'est les différents types de rendez-vous. Donc, évidemment, quand vous rentrez, vous pouvez vendre différents types de produits ou types de services. Et moi, par exemple, j'ai des qualifications qui est le premier appel, ensuite j'ai des démos, ensuite j'ai des négociations. Et je vais choisir mon type. Et là, en fait, en fonction de mon type de rendez-vous, ça va répondre à votre question, c'est : quelle est la trame qui est associée à ce type ? Ou du moins, quelles sont les bonnes pratiques ? Donc là, un que je peux vous montrer, c'est Habitat Plus. C'était un type de qualification. Donc, c'est un premier rendez-vous comme on a là, et ça, c'est un."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 559380,
+      "end_ms": 560280,
+      "text": "C'est quoi Habitat Plus ?"
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 560400,
+      "end_ms": 570600,
+      "text": "C'est un réseau de rénovation de l'habitat. Ils sont dans le sud-ouest. Eux, ils font vraiment tout ce qui est charpente, caisse d'isolation. C'est une boîte de ils ont 32 commerciaux."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 571800,
+      "end_ms": 571980,
+      "text": "Okay."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 572580,
+      "end_ms": 587880,
+      "text": "Et eux, si vous voulez, ça, c'était ma trame à droite. Donc, à droite, vous avez directement le script. Donc là, vous avez vu, je vous ai pris forcément un bon rendez-vous, mais j'ai validé toutes les étapes. Là, à gauche, en fait, vous avez : est-ce que je valide les étapes ou non ? Et ça, c'est exactement le script."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 588000,
+      "end_ms": 592800,
+      "text": "Et là, vous êtes analysé vous-même lors de votre échange avec Habitat Plus ?"
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 593520,
+      "end_ms": 596220,
+      "text": "C'est SalesAI qui analyse. Ça, c'est directement."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 596340,
+      "end_ms": 599760,
+      "text": "C'est-à-dire, c'était vous le cobaye et c'était vous le commercial qui était analysé ?"
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 599760,
+      "end_ms": 638820,
+      "text": "C'est ça, c'est ça. Moi, actuellement, je suis le plus gros utilisateur de SalesAI, évidemment, vu que c'est moi qui gère la partie commerciale. Mais oui, oui. En fait, on a structuré déjà un peu ce que vous faites dans les réseaux. Nous, on a structuré notre approche commerciale, mais qui est toujours un peu flexi parce qu'on n'a pas encore les meilleures approches. On prend la donnée terrain et SalesAI nous aide là-dedans. Donc, on avait établi une structure. On s'est dit : okay, l'introduction personnelle, il fallait que ça soit. Après, découverte client, quels sont ses besoins ? Et après, la présentation. Mais en plus de ça, SalesAI, à chaque fois, va analyser ce qui s'est bien passé, ce qui ne s'est pas bien passé, et va aider à restructurer ce pitch au fur et à mesure du temps qu'il a de la donnée. Et donc là, c'est tous les points de passage que je devais faire."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 639720,
+      "end_ms": 642240,
+      "text": "Je peux vous embêter ? Je vous pose plein de questions, mais c'est vraiment."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 642240,
+      "end_ms": 643620,
+      "text": "Allez-y, allez-y. C'est mieux comme ça."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 643680,
+      "end_ms": 660300,
+      "text": "Intéressant. Là, vous, vous faites l'entretien avec Habitat Plus dans ce cas-là, vous le faites en visio. Vous avez votre téléphone avec l'application qui tourne en parallèle, et vous avez des retours immédiats, directs, sur lesquels vous réagissez ?"
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 660480,
+      "end_ms": 671820,
+      "text": "Non, ça, c'est une bonne question. Non, parce que moi, c'est un cas particulier où j'utilise en visio, mais bon, avec le téléphone sur le côté. Nous, nos utilisateurs l'utilisent généralement quand ils sont chez le client. Et en fait."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 672060,
+      "end_ms": 672960,
+      "text": "Oui, le téléphone ne marche pas."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 672960,
+      "end_ms": 687240,
+      "text": "Oui, c'est ça. Et ça ne marche pas. En fait, il faudrait qu'on a des problèmes de réseau. Donc, on a fait une application qui est dédiée à eux. Donc, en fait, ce n'est pas live. Ils enregistrent, à la fin, ils recliquent sur « Valider », et là, ça analyse. Donc, vous l'avez dans les."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 687300,
+      "end_ms": 691380,
+      "text": "Donc, on analyse tout cet entretien, et comme ça, on voit les axes d'amélioration pour la suite."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 691500,
+      "end_ms": 716460,
+      "text": "Ensuite, c'est ça. Si vous voulez, il y a trois étapes d'utilisation de SalesAI. C'est Habitat Plus, imaginons on a un client, je les ai déjà vus une fois en qualification. Là, je passe la démo. En amont, je vais aller sur Atlas. Donc là, je rentre sur le rendez-vous, je vais aller sur Atlas, et là, je peux poser des questions. Donc, fais-moi un topo. Je vais chez Habitat Plus demain faire la démo. Et ensuite."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 716640,
+      "end_ms": 719460,
+      "text": "Donc, Atlas, c'est votre GPT, votre chat ?"
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 719520,
+      "end_ms": 734640,
+      "text": "Exact. Qui est basé donc sur toute la structure. Il a toute la connaissance, en fait, du rendez-vous, plus toute la connaissance de l'entreprise, ce qu'on vend, nos types de rendez-vous, nos types de débats, les performances de chacun. Donc là, on peut lui demander en amont."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 736080,
+      "end_ms": 741540,
+      "text": "Il est branché sur le web pour se nourrir via leur site web, ou c'est vous qui le nourrissez avec ?"
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 741660,
+      "end_ms": 895920,
+      "text": "Oui, c'est nous qui le nourrissons. En fait, une fois qu'on rentre dans un réseau, c'est assez simple quand on rentre dans un réseau, mais on a quand même la première semaine d'implémentation qui est la spécialisation de l'IA. Donc, on vient spécialiser cette IA avec tous les détails que l'entreprise nous donne. Donc, en fait, on spécialise une IA par réseau. Donc, Habitat Plus, eux, ils ont une IA SalesAI, un autre au fil des toits a son IA SalesAI, et ça, ça vient en fait d'être la base de Atlas. Et là, on peut poser les questions pour faire un topo. Donc là, en amont, je me prépare, je me reprends tous les détails. Okay, c'est 32 commerciaux, 6 managers. Les problèmes auxquels on a enfin qui m'avaient identifié clairement, c'était ça. Donc, okay, je me mets dans cette place-là. Et quand je suis chez le client, ça ne change rien. Donc, je m'enregistre, je fais ma déballe. À la fin de ma déballe, je réappuie sur un bouton, et là, ce que j'ai dit avant, l'analyse se lance après. En 5, 10 minutes, on a notre analyse. Donc, l'analyse, c'est tout ce que vous voyez ici. Le résumé d'une, pour que si c'est quelqu'un d'extérieur ou moi, je le reprends en quatre lignes, je sache ce qui s'est passé chez Habitat Plus. Le transcript. Donc là, directement, il va capter tous les échanges qu'on a eus et les parcer, donc entre client et moi, le commercial. Donc là, on peut voir tout l'échange. On a toute la partie script. Donc ça, c'est vraiment performance commerciale. Qu'est-ce qui était attendu de moi ? Qu'est-ce que j'ai délivré et pourquoi ? Donc, en fait, vous voyez, il y a une différence. Il y en a qui sont notés, il y en a trois ici, et il y en a qui ne sont pas notés. Donc, en fait, eux, c'est juste des points de passage. Est-ce que je les ai dit ? Mais ce n'est pas forcément important. En fait, on a vu nous-mêmes, on a vu avec l'IA que soit il fallait dire ces points de passage, mais ce n'est pas forcément ceux que je dois plus maîtriser pour avoir une vente. Par contre, ceux-là, donc il y a beaucoup de flexibilité quand on rentre dans un réseau, parce que c'est pareil, c'est eux ce qu'ils nous donnent, ce qu'ils donnent à leurs commerciaux en formation. Ils nous donnent tout le matériel pour qu'on puisse nourrir à l'IA, et c'est elle qui vient faire la déballe après. Donc, par contre, si on rentre dans un qui est noté, là, vous allez avoir directement accès à la méthode. Donc, c'est toujours très objectif. Voilà ce qu'on attendait de toi, voilà ce que tu as fait sur ce rendez-vous-là. Donc, pourquoi tu as eu cette note-là et qu'est-ce que tu dois améliorer ? Donc là, qu'est-ce qu'on attendait de toi ? On peut rentrer dans la méthode directement plus en détail. Donc, dans cette phase, mon objectif est de comprendre en profondeur les enjeux de la direction commerciale, donc faire dire au client quelle est sa problématique. Et là, l'analyse de Atlas, c'est ma performance sur ce rendez-vous. Donc ça, pareil, on fait avec les directeurs commerciaux ou les formateurs ou les managers. Quand on est dans la première semaine."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 895980,
+      "end_ms": 898320,
+      "text": "C'est une configuration de base, vraiment."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 898380,
+      "end_ms": 944760,
+      "text": "Exactement. Donc ça peut être plus long, ça peut être plus court, c'est en fonction de leur force commerciale, à quel point ils sont à l'écoute, à quel point ils vont plus loin. Et ça, c'est vraiment pour eux. Donc, qu'est-ce qui s'est passé de bien et qu'est-ce qu'ils doivent améliorer ? Et ça, pareil, moi, sur la découverte client, enfin même pas sur ce type de rendez-vous, mais dans un autre qui est la démo, je dois aller plus pousser sur le besoin client. Et en fait, j'avais toujours des mauvaises notes parce que j'avais toujours du mal à leur faire dire, à leur faire quantifier quel est leur besoin, quel est le manque à gagner, quel est vraiment leur taux de conversion qui est moins bien que la moyenne, et je n'allais pas forcément pousser. Donc, en fait, à chaque fin de rendez-vous, même je demandais à Atlas de me faire une liste de questions que j'aurais pu poser pour m'améliorer pour la prochaine fois. J'ai les questions prêtes à leur poser pour quantifier ça. Et en dessous, vous avez donc identifié cinq fois, ça, c'est juste pour."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 944880,
+      "end_ms": 955320,
+      "text": "Mais ça, vous demandez à la fin, vous, en tant que commercial, vous faites l'effort de le demander. Ce n'est pas le système qui vous pousse automatiquement des axes d'amélioration avec des propositions."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 955500,
+      "end_ms": 983220,
+      "text": "Alors, c'est une bonne question. Si c'est l'IA qui le fait automatiquement, mais vu que pour tous ces types de pour un type de rendez-vous, ce qu'on demande à l'IA est la même chose, en fait, ça, on va le demander plus au manager. On demande au manager : « Quel retour tu as envie de faire à ton commercial ? », que ce soit sur la performance ou pour préparer le prochain rendez-vous. Du coup, moi, vu que chez SalesAI, je joue le rôle de manager et de commercial en même temps, je modifie parce que je sais que je dois m'améliorer là-dessus. Mais généralement, ce n'est que le manager qui a la main là-dessus."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 983880,
+      "end_ms": 984120,
+      "text": "Okay."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 985140,
+      "end_ms": 998580,
+      "text": "Là, c'est juste pour avoir une grille de lecture plus simple du rendez-vous, parce que là, vous voyez, il fait 40 minutes, mais parfois, on a 4, 5 heures de rendez-vous. Là, c'est juste : « Okay, découverte client », dans le transcript, c'est cinq fois. Donc là, hop, je clique dessus, ça m'emmène directement au bon endroit."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 999480,
+      "end_ms": 1001580,
+      "text": "Okay. Chapitrage, on a renvoyé."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 1001820,
+      "end_ms": 1006500,
+      "text": "Là, évidemment, je peux lancer l'audio, je peux me lancer, je peux réécouter le rendez-vous."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 1006740,
+      "end_ms": 1009740,
+      "text": "Oui, c'est un peu un plot d'améliorer là."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 1009860,
+      "end_ms": 1052100,
+      "text": "Oui, c'est exactement ça. C'est plot pour les commerciaux, en fait, pour les équipes commerciales. Vous avez « Commentaires », ça, c'est plus la partie échange, comment dire, c'est une agence digitale. En fait, quand on rentre sur un réseau, généralement, une même équipe commerciale a accès à tous les rendez-vous de chacun, et là, ils peuvent échanger. Donc, souvent, le manager ou Pierre et Alexandre, qui sont aussi mes cofondateurs, eux, ils pinent un endroit, par exemple ici, et en fait, on va bon, là, c'était des tests, mais en gros, ils vont juste le lendemain en réunion, ils vont me dire : « Ah mais tiens, regarde, j'avais regardé ça, viens, on écoute ensemble et on reprend. » Ou alors, ils me mettent des commentaires directement : « Tiens, tu aurais pu dire ça à un moment donné, j'avais dit."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 1052280,
+      "end_ms": 1054980,
+      "text": "Oui, donc le manager qui lève son commentaire."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 1055040,
+      "end_ms": 1118700,
+      "text": "Qui échange. C'est ça, c'est ça. Et là, le dernier onglet, c'est le CRM. Pareil, ça, c'est modifiable, c'est adaptable à chaque besoin. Ici, ça, c'était mon besoin à moi. Donc, j'ai deux choses. CRM, c'est juste quelles données on ressort. Là, ce n'est pas vraiment du coaching, c'est plus un note taker, un compte rendu comme à l'upload. Mais moi, je voulais une identification médic de Habitat Plus, enfin de chacun des clients. Du coup, ça vient remplir tous ces trucs-là, de métriques, economic buyer, les pains identifiés, le champion, et ça vient, en fait, le nourrir au fur et à mesure des rendez-vous avec Habitat Plus, pour être sûr que j'ai bien toutes les informations pour avancer avec ce client-là. Et en dessous, j'ai demandé un email de suivi qui me sort directement, et ça, je le copie-colle et je l'envoie directement. Avec les prochaines étapes et tout ça. Donc ça, c'est plus mon moi, le SalesAI commercial, c'est plus mon assistant. Je lui demande exactement ce que je veux. Et si jamais, ça, c'est formaté à chaque fois, donc à chaque fin de rendez-vous, j'ai ça, parce que je sais que je dois remplir mon médic et je dois faire un mail pour eux. Mais si jamais il y a besoin de plus de choses, là, c'est là où on demande à Atlas plus de questions sur le rendez-vous."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 1119540,
+      "end_ms": 1131360,
+      "text": "Okay. Oui, et dans tout ce parcours-là, en effet, c'est votre client qui c'est ça le travail qu'il faut faire. Initialement, configurer, rentrer toute la méthode, les étapes."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 1131720,
+      "end_ms": 1132080,
+      "text": "C'est ça."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 1132800,
+      "end_ms": 1138860,
+      "text": "Et affiner, j'imagine, parce qu'il y a une première version test et au fur et à mesure, on."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 1139040,
+      "end_ms": 1220040,
+      "text": "C'est ça. Généralement, comment ça se passe ? C'est on fait des tests de huit mois, de huit semaines, donc deux mois. Première semaine, on se spécialise avec le formateur ou le garant de la méthode ou le manager pour avoir quelle est votre trame pour quel type de vente. Donc ça va être vraiment cette partie-là en fonction du type de vente. Deuxième semaine, directement, on enchaîne sur le terrain. Donc l'application SalesAI Habitat Plus avec l'IA Habitat Plus est prête. On va faire une formation le lundi de deux heures avec les commerciaux, de une heure avec les managers, comment utiliser l'application, comment faire des feedbacks. Et ensuite, s'ensuit deux semaines où on leur demande des feedbacks. En fait, il y a deux choses. Il y a les feedbacks humains qui vont nous dire : « Okay, là, on doit rajouter une partie sur ce script-là parce qu'il en manque une. Le résumé, j'aimerais bien dans un autre format. Le retour de l'IA pour quand c'est noté, j'aimerais bien que ça soit plus extensif et qu'il y ait plus de retours. » Donc là, c'est pendant deux semaines. Et aussi, il y a l'IA qui, au fur et à mesure où elle va avoir la donnée, elle va pouvoir s'améliorer elle-même, améliorer ses comptes rendus, améliorer ses notes. Et après, au bout des deux semaines, là, c'est vraiment on laisse au moins cinq semaines de run, de tests où les mecs l'utilisent, on voit comment ils l'utilisent, on identifie les KPIs, toute l'amélioration du taux de conversion, du nombre de coachings qui sont faits, du suivi de la trame aussi si c'est amélioré, tout ça."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 1221000,
+      "end_ms": 1234620,
+      "text": "Okay. Ça, ça marche. Comment ça fonctionne ? Parce que toutes les boîtes n'ont pas une méthode de vente écrite avec les étapes, avec des verbatims, avec des choses là. Comment vous travaillez quand ce n'est pas défini ?"
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 1235040,
+      "end_ms": 1236180,
+      "text": "On a deux cas d'usage."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 1236900,
+      "end_ms": 1239660,
+      "text": "Mais la Habitat Plus, ils ont une méthode de vente ?"
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 1239720,
+      "end_ms": 1379940,
+      "text": "Oui. Eux, en fait, on a souvent on le sépare en soit c'est développé, pas développé, enfin c'est un nouveau réseau, ils n'ont pas encore de structure ou c'est un ancien réseau, ils ont la structure. Mais surtout, nous, on sépare entre B2C et B2B. B2C, c'est généralement très structuré, donc Habitat Plus, c'est du B2C. Donc ils ont une trame qui est quand même assez spécifique. Si on va plus vers le B2B, c'est moins structuré, ce n'est pas sur du one shot, c'est vraiment sur du R3, R4, enfin ils le voient plein de fois. Eux, là, en fait, SalesAI, c'est sur un suivi client. Donc là, on ne va pas être au rendez-vous par rendez-vous, on va plutôt analyser sur l'ensemble d'un cycle de vente avec ton client, donc ça peut être cinq rendez-vous. Est-ce que tu as fait toutes les étapes nécessaires ? Ce n'est pas forcément : « Est-ce que tu t'es présenté et tu as dit ça mot à mot ? » C'est : « Est-ce que tu as réuni toutes les informations ? Est-ce que tu as collecté toutes les informations ? Est-ce que tu as bien présenté ton produit ? » Pour voir si toutes les étapes, au final, ont été respectées et tu as bien fait le cycle parfait pour vendre à ton client. Et en fait, que ce soit B2B ou B2C, si eux n'ont pas de structure, ce n'est pas grave, dans la première semaine, on doit en mettre une chez dans SalesAI, mais on va la mettre, juste on va la structurer pour eux, mais on va juste faire quelque chose de très simple. On a des clients qui n'ont que quatre étapes, qui ont : introduction, présentation de la société, découverte du problème, solution, closing. Et après, on a d'autres sociétés qui en ont 20, 25 points de passage par rendez-vous. Donc ça peut être plus ou moins structuré, et après, l'IA va aider à améliorer, ensuite avec forcément les années, les mois et les audios qu'on va réussir, on va pouvoir détailler ou pas toute cette partie-là. Parce que là où SalesAI est bon, quand il a la donnée agrégée de l'ensemble des rendez-vous, ça va être de pouvoir, en fait, connecter ce qu'on a avant avec un CRM, donc le chiffre qui est fait par chacun, le taux de conversion et le chiffre pur, avec la performance exacte. Donc on va pouvoir dire pour chacune des parties combien elles valent, en fait. Okay, moi, j'ai vu que dès que je close, 80 %, ils ont une découverte client qui est au top, qui suit cette trame-là et qui est vraiment au moins à quatre sur cinq et qui est vraiment maîtrisée. Du coup, ça veut dire que si on n'a pas cette maîtrise de cette partie-là, on va beaucoup moins vendre et ça peut expliquer un taux de conversion inférieur. Donc on va pouvoir vraiment guider les gens, déjà essayer de comprendre l'importance de chaque point de passage de la méthode et ensuite en déduire les axes d'amélioration de chacun."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 1381140,
+      "end_ms": 1398120,
+      "text": "Okay. Et donc, en principe, votre système-là pourrait s'adapter aussi au suivi managérial. Comment le manager échange avec ses équipes, comment il structure ses échanges, etc. ? Parce que tout le contenu peut être personnalisé, adapté à un cas."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 1398900,
+      "end_ms": 1448520,
+      "text": "Oui. Vous pensez à quoi là, exactement ? Parce qu'on a des points de suivi managériaux, donc on peut voir combien de commentaires, combien de fois un manager a vu les rendez-vous, donc on peut voir combien de feedbacks il y a eu. Ensuite, là, on est en train de travailler sur une version où le manager va pouvoir directement lui mettre des objectifs sur SalesAI, parce que vu que nous, on peut les traquer rendez-vous après rendez-vous, si le manager dit : « Okay, tu dois avoir une maîtrise du closing 20 % supérieure », on va pouvoir voir tous les jours et améliorer le commercial dans ce sens-là. Mais on n'a pas encore de suivi managérial dans le sens où on n'enregistre pas les managers quand ils font leur meeting, leur briefing, pour les noter. On peut le faire techniquement, vu que nous, on enregistre et après, on demande à une IA de faire du coaching sur une trame, sur ce qu'on attend de quelque chose, mais on ne le fait pas encore. Donc j'aimerais bien savoir ce que vous aviez en tête là pour ça."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 1450860,
+      "end_ms": 1533000,
+      "text": "Vous avez fait vos devoirs avant de me rencontrer, donc on accompagne les boîtes, aussi bien les équipes commerciales que les managers, les équipes managériales. Et donc, nous, la problématique, elle va être autre, parce que là, avec cet exemple Habitat Plus, vous avez une boîte, vous comprenez la boîte par cœur, vous rentrez l'ADN de la boîte dans votre système et après, ça roule. Nous, c'est autre chose. On a plein de clients différents. Et ce qui m'intéresse, parce qu'évidemment, on bricole de notre côté, je joue pas mal via un plot, via un enregistrement, avec le transcript, je passe par ChatGPT, j'écris. Nous avons bricolé des solutions qui sont épatantes, je trouve, mais pas industrialisables, très clairement. Et donc, vous, vous avez déjà pas mal de choses qui sont mises en place, c'est intéressant, et je pense qu'en effet, ça peut être une solution pour nous, que vous utilisez potentiellement, donc pour différents clients. Je ne parlerai pas en introduction chez les clients où vous poussez pour que vous ouvrez la porte, je pense beaucoup plus à une marque blanche ou d'autres pour qu'on puisse utiliser votre solution dans le cadre de notre métier."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 1535280,
+      "end_ms": 1580460,
+      "text": "J'ai une question là-dessus, parce que nous, on a travaillé pas mal avec des formateurs ou des réseaux. Justement, comme vous l'avez dit, on avait travaillé d'un côté en apporteurs d'affaires, donc avec leurs clients, ils nous poussaient pour qu'après, ensuite, ils avaient une commission là-dessus. Ou sinon, il y en a pas mal qui prenaient des licences pour les utiliser en formation avec les équipes commerciales. Ils avaient un certain nombre de licences, ils avaient une dizaine de licences, ils allaient faire leur formation et ils pouvaient utiliser, ils pouvaient donner l'accès pendant le temps de la formation à ces commerciaux-là, mais via le formateur, donc via vous. Vous, c'est comment que vous voyez ça ? Ou alors, nous, on a carrément aussi des réseaux qui, eux, quand ils vont chercher des missions, quand ils vont parler à des clients, utilisent notre application, mais pour eux. Vous, c'est dans quel aspect là que vous le voyez le mieux ?"
+    },
+    {
+      "speaker": "client",
+      "start_ms": 1581780,
+      "end_ms": 1646460,
+      "text": "Alors, évidemment, pour nous, ça, c'est une évidence, parce que c'est toujours pareil, on forme, mais est-ce qu'on fait bien ce qu'on dit aux autres de faire ? Ça, c'est une grande question. Non. Mais l'utilisation, il y en a deux. Il y en a, en effet, dans le cadre d'une formation, quand il y a des role plays, les accompagner. Oui, ça, c'est facile, c'est simple, et je pense que ça, c'est une occupation. Mais ce qui est beaucoup plus intéressant, c'est dans l'accompagnement plus long terme. Un réseau de développeurs immobiliers, ils font une formation, ils apprennent comment ça marche, ils s'entraînent, et dans le long terme, ils sont accompagnés, chaque commercial a un, deux, trois entretiens par semaine, par mois, qui vont être supervisés, enregistrés. Donc ça peut être ça aussi. Nos clients s'intéressent à un accompagnement post-formation ou autre pour approfondir, pour automatiser, pour autonomiser les managers aussi qui auront donc ce serait leurs managers qui utiliseront la surface."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 1647480,
+      "end_ms": 1664400,
+      "text": "Oui, okay. Oui, c'est vraiment donner. En fait, c'est ce qu'on a fait avec pas mal de gens, c'est qu'ils font leur formation comme vous, mais c'est souvent délimité dans le temps. Et ensuite, pour avoir de l'impact sur le long terme, vous rentrez cette formation-là dans SalesAI, et après, vous suivez l'avancement, l'adoption sur le terrain, vous permettez aux managers de coacher sur ce que vous avez mis en place."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 1665420,
+      "end_ms": 1693560,
+      "text": "Oui. Est-ce que votre parce que là, je vois une jolie analyse, c'est sympa, il y a des notes, des choses comme ça. Est-ce que vous avez un résultat, une feuille qui récapitule un peu plus visuelle avec, je ne sais pas, des araignées, avec des rangs qui se remplissent ou d'autres ? Une visualisation simple d'accès par rapport à cette synthèse un peu intellectualisée qu'il y a à l'écran."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 1694040,
+      "end_ms": 1695960,
+      "text": "Sur le commercial ou sur le rendez-vous ?"
+    },
+    {
+      "speaker": "client",
+      "start_ms": 1698180,
+      "end_ms": 1703940,
+      "text": "Que le commercial puisse recevoir pour avoir très vite un aperçu de."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 1704120,
+      "end_ms": 1711140,
+      "text": "Non. Oui. Le commercial, il reçoit ça. Je vais vous partager l'écran sur le téléphone pour vous montrer. C'est pour ça que je m'étais connecté là."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 1711260,
+      "end_ms": 1714440,
+      "text": "Mais oui, c'est vrai. Nous, on est sur l'écran du manager."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 1714680,
+      "end_ms": 1763760,
+      "text": "Oui, c'est ça. Pardon, je vais m'éteindre. Et ensuite, après, je reviendrai parce que j'ai un dernier truc à vous montrer sur le tableau de bord. Okay. Normalement, je serai sur le bon compte. Donc là, vous êtes sur mon téléphone, là, vous avez l'application SalesAI. Okay. Là, on est sur le même compte que vous avez vu juste avant. Là, c'est l'application commerciale. Donc ça, c'est la mienne. Donc directement, l'enregistrement, vous voyez, se fait sur l'application elle-même, donc en haut à droite. C'est un bouton pour le lancer. Il faut attendre au minimum 30 secondes, donc je ne vais pas le lancer, parce que sinon, ça se supprime automatiquement. Mais on le lance en haut à droite, et après, on a un autre clic, et là, on lui demande juste le nom du client et le type de rendez-vous. Est-ce que c'était une qualification ? Est-ce que c'est une démo ? Là, ici, j'ai l'ensemble de mes rendez-vous que j'ai faits."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 1765080,
+      "end_ms": 1777080,
+      "text": "Donc le commercial, il a ils sont là, Habitat Plus. Le commercial, il quitte la voiture, il appuie sur le bouton, il lance l'enregistrement, il range le téléphone et c'est bon, ma poule."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 1777320,
+      "end_ms": 1814580,
+      "text": "C'est ça, c'est ça. Et puis, c'est adapté vraiment à l'utilisation terrain. Donc s'il y a une passation, s'il y a un appel, enfin, je ne sais pas si vous avez déjà utilisé justement, Claude, ils font un hardware parce que comme ça, ça ne se coupe pas. Nous, ils n'ont qu'à besoin d'appuyer une fois au début, et si jamais il y a un appel, automatiquement, le micro se coupe et se reprend à la fin de l'appel. Donc ils ont vraiment, sur le terrain, ils ne pensent à rien d'autre à part faire leur vente, et une fois qu'ils ont fini, qu'ils rentrent dans la voiture, tac, ils rappellent. Pareil, on a une bande passante de cinq heures d'audio, donc vraiment pour couvrir n'importe quel type de rendez-vous, ça soit assez large. Donc là, pour."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 1814700,
+      "end_ms": 1821240,
+      "text": "Et vous faites des petites recommandations, encore RGPD, monsieur, vous êtes d'accord que je vous enregistre ?"
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 1821300,
+      "end_ms": 1901280,
+      "text": "Oui, oui. On a deux cas d'usage. On a le cas d'usage où c'est de la vente, donc le rendez-vous dure plus de dix minutes, on peut introduire dans la déballe ça, je vais vous le montrer. On peut introduire dans la déballe la demande de l'accord. Pareil, ça, ça se fait généralement bien. Bon, B2B, B2C, c'est pareil. La déballe est un peu différente, mais B2C, c'est vraiment pour rassurer le client. Donc souvent, c'est une phrase très simple. D'ailleurs, tous nos entretiens sont enregistrés à des fins de qualité et de transparence, vous savez, avec ce qui se passe maintenant. On a moins de 1 % des clients qui disent non. Et B2B, c'est plus en mode note taker, mais oui, il faut le dire. Par contre, si on est en prospection, je ne sais pas si vous avez des cas où vous aidez des réseaux en prospection, parce que là, il y en a pas mal en plus en B2C qui passent au porte-à-porte, parce qu'il n'y aura plus la téléprospection, donc on en aide pas mal. Là, eux, on leur donne un badge, je pourrais vous envoyer le visuel, mais il y a un badge, en gros, en rouge, il y a marqué : « Par des soucis de qualité, vous êtes susceptibles d'être enregistrés ». Et après, on leur donne un flyer, donc c'est souvent un flyer où c'est une présentation de la société, avec en bas l'accès à leurs droits, donc ils ont accès à notre site pour reprendre l'enregistrement, le supprimer et demander la suppression. Donc voilà. Et comme ça, dans la prospection, on n'a pas besoin de il y en a qui le font, donc nous, on le préconise aussi de changer la déballe pour qu'on demande, mais il n'est pas forcément obligé."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 1901940,
+      "end_ms": 1903920,
+      "text": "Oui. C'est des questions un peu."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 1904340,
+      "end_ms": 1909320,
+      "text": "C'est un peu comme sur le Zoom, quand je lance l'enregistrement, ça sera en haut à gauche, il y aura marqué, il y a le point rouge qui dit que c'est enregistré."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 1909440,
+      "end_ms": 1910520,
+      "text": "Exactement. Okay."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 1910640,
+      "end_ms": 2093160,
+      "text": "Donc voilà. Et là, si on rentre dans pareil, le même Habitat Plus, là, ils ont accès exactement à la même chose que je vous ai montré, c'est vraiment le résumé. Là, ils peuvent voir, en fait, neuf sur neuf, ce n'est pas une note, c'est vraiment les points de passage que j'ai réussis par rapport à ce qui a été demandé. Donc pareil, là, j'ai accès à mon script, j'ai accès à mes je peux reprendre le rendez-vous, les feedbacks. Là, je regarde où est-ce que ça s'est passé, ça m'emmène directement au bon endroit. Je peux réécouter, là, je peux mettre mes commentaires, discuter avec tout le monde, et là, j'ai accès directement à Atlas ici. Et c'est globalement la même chose, et ils ont accès directement ici. Par contre, c'est pour ça que je vous ai demandé avant. Si je reprends sur l'ordinateur, on a aussi la partie ce que je ne vous ai pas montré, c'est la partie managériale, du coup, justement. Il faut que je me connecte à l'autre. En fait, la partie managériale, là, pareil, c'est des fausses datas, mais pour vous montrer. Là, vous avez accès, en fait, à toutes vos équipes, donc vous pouvez voir par commercial ou par équipe. Et vous pouvez, pareil, avoir l'évolution dans le temps, et c'est là que je vous parlais avant de comprendre et mettre des objectifs, et puis évaluer la progression de chacun à travers le temps. Donc là, vous avez juste le nombre de rendez-vous, mais ce qui est important, c'est le plan de vente ici. Ici, pareil, vous choisissez votre type de produit, votre type de rendez-vous, nouveaux clients, démo ou vente n'importe quoi, et là, vous voyez, en fait, la completion pour tout le monde ou de l'équipe que vous voulez ou de l'utilisateur, voir les notes directement, le taux de complétion et tout ça. Donc ce qui est intéressant là, par exemple, c'est qu'on voit une grosse différence de performance entre, par exemple, le 26, qui, eux, ils ont un très bon taux de conversion, et là, vous voyez que le closing est très bon, il y a des bonnes notes. Par contre, le pass travaux qui a été mis en place récemment, eux, ils ne l'utilisent pas du tout. Donc là, il y a un gros problème. Sur dix rendez-vous, là, il n'y en a personne qui prend. Par contre, si on regarde le 74, eux, on sait très bien que là, il y a un gros problème sur la deuxième partie du rendez-vous. Et là, on a des commerciaux qui sont plus novices, qui sont plus jeunes et qui ont beaucoup de partiels. Donc là, en fait, on identifie clairement les axes d'amélioration, ce qui pêche, on peut rentrer dedans, et en fait, on peut voir là, c'est tous ceux qui sont dans cette agence-là. Et ici, là, c'est un peu barbare, mais on peut encore plus filtrer. Là, c'est l'évolution des notes. Donc on voit très bien qu'en fait, il y a très peu qui maîtrisent vraiment cet aspect-là du je ne sais pas, je crois que j'ai appuyé sur le closing ou l'annonce du prix. Oui, prix marché. En fait, il y en a très peu qui le maîtrisent. On voit des notes très basses, à part lui qui et c'est là où on peut voir vraiment l'évolution de la maîtrise de la technique de vente et très niveau granulaire de chacun. Donc."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 2093520,
+      "end_ms": 2097900,
+      "text": "Les points de passage, là, sur les courbes, c'est un entretien? Oui, c'est ça."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 2098740,
+      "end_ms": 2101140,
+      "text": "Non, c'est par jour. Oui. Par exemple, là."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 2101380,
+      "end_ms": 2106480,
+      "text": "Oui. Okay. Donc ça crée une note moyenne par rapport aux entretiens du jour."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 2106600,
+      "end_ms": 2160000,
+      "text": "C'est ça. Et puis la note, c'est très objectif. Vous avez utilisé l'IA, donc je ne vais pas vous apprendre, mais c'est vraiment ce qu'on attendait de vous, voilà ce qui était, ça peut être soit du mot à mot ou ça peut être juste de la structure. Voilà le résultat qui devrait être attendu de ta déballe, donc pas forcément le mot à mot ou la question exacte, par exemple dans ma découverte client, mais plus à la fin, tu dois vraiment comprendre et avoir un chiffre pour quantifier le problème de ton client. Et là, est-ce que tu as réussi, oui ou non? C'est ça, en fait. Et ensuite, en bas, là, c'est plus pour l'analyse. Là, ce n'est pas des notes, c'est plus des moments clés, donc c'est des choses qui sont hors script, mais qui peuvent quand même arriver, qu'on souhaite traquer. Donc les objections. Objection, là, cette objection-là, si des usagers veulent partir, on voit que sur 25 % des rendez-vous, on l'a. Et là, on voit qu'on a une note assez terrible de 0,3. Donc ça, bon, ça, et en plus, ça, c'est un vrai cas d'usage. Ils se sont rendu compte que personne ne la maîtrisait, cette objection-là, et qu'ils avaient perdu un nombre de rendez-vous, c'est incroyable."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 2160060,
+      "end_ms": 2162940,
+      "text": "D'accord. On va l'intégrer. Donc ça, c'est génial."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 2163120,
+      "end_ms": 2164020,
+      "text": "Oui. Pareil, objection."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 2164140,
+      "end_ms": 2165400,
+      "text": "Et vous pouvez la mettre."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 2165580,
+      "end_ms": 2185200,
+      "text": "Et là, vous n'avez que des objections, mais là, moment clé, pareil, ça, c'est assez modulable. On peut mettre des intérêts. Moi, j'ai mis pas mal d'intérêts dans mon truc, c'est pour capter est-ce qu'ils ont un manque à gagner ou est-ce que c'est eux, ils veulent de l'amélioration ou quoi. Donc on peut un peu tout capter avec ces moments clés, voir pour faire des statistiques après sur ce rendez-vous, sur ces choses. Ça, c'est plus global pour la formation."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 2187060,
+      "end_ms": 2190960,
+      "text": "Bon, c'est top. Il y a matière à continuer à se parler."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 2191380,
+      "end_ms": 2191800,
+      "text": "Absolument."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 2193300,
+      "end_ms": 2248500,
+      "text": "C'est super intéressant. Bon, là, clairement, évidemment, prochaine étape, il faut parler de sous, que je comprenne votre système et que vous compreniez aussi comment on peut jouer ensemble de manière intéressante pour les deux côtés. Aujourd'hui, on utilise des solutions qui sont bricolées, on a des solutions, mais on cherche à industrialiser. On aurait bien aimé le faire en interne, mais bon, c'est comme toujours. Le temps qu'on développe soi-même le truc, le monde a déjà bien avancé, donc vaut mieux s'accrocher à quelqu'un qui maîtrise. Okay. Vous vous challengez alors, c'est la question à la nouille peut-être à vous poser, et je ne vous la pose pas pour démarcher ceux-là, mais vous vous challengez par rapport à quel concurrent? Qu'est-ce qu'il y a autour de vous?"
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 2248800,
+      "end_ms": 2249520,
+      "text": "Oui. Nous."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 2250120,
+      "end_ms": 2252220,
+      "text": "Et encore une fois, je ne les fais pas pour faire du benchmark."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 2252700,
+      "end_ms": 2275980,
+      "text": "Non, non, non, mais nous, en plus, on est très ouverts là-dessus. Nous, on en a plusieurs. Vous avez raison, il y a les solutions custom, souvent ça, ça vieillit assez mal. Les plus gros concurrents, je dirais, c'est CallTrack et RevInsight. Je ne sais pas si vous en avez entendu parler. Eux, ils font globalement pareil, voire même plus poussé sur le suivi client, ce n'est que sur du B2B, mais eux, c'est uniquement sur Zoom. Donc ils se connectent à Zoom, donc."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 2276040,
+      "end_ms": 2276940,
+      "text": "Oui, c'est ça."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 2276940,
+      "end_ms": 2302080,
+      "text": "Oui. MeetNote, c'est pareil, C-L-A-P. Eux, pareil, c'est enregistrement, suivi, mais uniquement sur visio ou téléphone, donc il n'y a pas vraiment de physique. Sinon, aux US, c'est vraiment FieldPro et SalesTech, R-I-L-A. Eux, par exemple, c'est exactement comme nous, mais eux, ils ne sont qu'aux US. Donc eux, ils ne traquent pas le consentement, il n'y a pas le filtrage des données, tout ça, donc."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 2302740,
+      "end_ms": 2312160,
+      "text": "Oui. Est-ce que vous avez entendu d'une petite boîte, une nouvelle qui s'appelle LearnUp? J'ai vu que leur fondateur vous suit."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 2312880,
+      "end_ms": 2316240,
+      "text": "LearnUp, non, mais est-ce que c'est LearnUp?"
+    },
+    {
+      "speaker": "client",
+      "start_ms": 2317020,
+      "end_ms": 2317980,
+      "text": "LearnUp, c'est ça."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 2318100,
+      "end_ms": 2345400,
+      "text": "Oui, voilà, c'est ça. C'est la prochaine, c'est LearnUp, oui. Pareil, eux, je les suis. Eux, ils font globalement comme nous. Je n'ai pas vu leur tableau de bord ou quoi, mais c'est pareil, c'est capter la connaissance et après la lister, eux, c'est exactement comme nous sur le marché français. Ils sont moins tech, donc il y a peut-être moins de détails après de data, tout ça, parce qu'ils viennent de la formation commerciale, mais globalement, la solution est pareille."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 2346900,
+      "end_ms": 2359680,
+      "text": "Oui, je vous rejoins dans ce que j'ai entendu d'eux et ce que j'ai vu d'eux, vous êtes plus fin. Comme vous dites, plus tech parce que vous mettez un peu plus de trucs dedans."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 2359740,
+      "end_ms": 2392080,
+      "text": "C'est ça, mais c'est bon, on vient de ce monde-là. Donc moi, j'ai fait MedTech Lyon où j'avais pas mal de commerciaux de terrain, mais sinon, j'ai travaillé au cabinet de conseil un grand cabinet de conseil, et Alexandre était chez un grand groupe hotelier, donc on travaillait beaucoup data driven. Mon frère venait de LifeTech, lui, il était chez une startup HealthTech. Donc CallTrack, Salesforce, enfin, nous, c'était vraiment que des tableaux à longueur de journée pour avancer, pour traquer, pour s'améliorer, tout ça. Et c'est quelque chose qui n'est pas encore présent sur la vente physique, donc on espère leur apporter ça."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 2392560,
+      "end_ms": 2398500,
+      "text": "Oui, c'est super intéressant. Bon, déjà, vos parents, ils peuvent être contents de leur deux fils. Ça, c'est chouette."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 2398740,
+      "end_ms": 2402880,
+      "text": "On n'a pas encore réussi ce qu'on voulait faire, mais on s'en rapproche, on s'en rapproche."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 2403000,
+      "end_ms": 2419620,
+      "text": "Oui, vous bougez, vous bougez, vous n'attendez pas que ça vous tombe dessus. Ça, c'est une bonne chose. Oui, je veux bien qu'on se reparle. Et vraiment, c'est intéressant ce que vous racontez, et ça tient la route. Comment vous fonctionnez?"
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 2420100,
+      "end_ms": 2506920,
+      "text": "Alors, j'aimerais bien refaire, peut-être on se dit ça début janvier, refaire un rendez-vous avec vous, vraiment comprendre comment vous l'avez compris, nous, on est une start-up, donc on est assez modulable, mais on n'a pas envie, notamment, on a pas mal de sollicitations, pour être honnête, par rapport à l'équipe qu'on est. On est trois, là, on recrute encore deux personnes, on grossit. Donc trop s'éloigner de notre cas d'usage qui est habituel, qui est de traquer, noter ce que vous avez vu. Donc plutôt un rendez-vous où on regarde un peu les possibilités de quelle manière vous voulez nous utiliser pour, en plus, après, que je vous fasse vous avez parlé de sous, je vous fasse une offre cohérente par rapport à ça. Nous, on fonctionne généralement tout le temps à la licence, mais ça dépend pas mal forcément de nos coûts. Nous, c'est vraiment le combien d'enregistrements vous comptez faire en fonction des licences, mais après, c'est à la licence. Donc mieux comprendre comment vous allez les utiliser, sur quel principe, est-ce que c'est vos clients sur des années ou sur une période définie, est-ce que c'est vous, pareil, sur quelques clients. Donc plus regarder vos problématiques, vos besoins, et ensuite, on pourra enchaîner, je pourrai vous faire quelque chose d'un peu plus personnel et vous faire une offre après-demain. Je ne vous entends plus, vous avez le micro là qui vient de se couper."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 2507640,
+      "end_ms": 2584980,
+      "text": "Voilà. Je vous raconte des histoires. Pardon. Je disais, au mois de janvier, je ne serai pas seule, je serai accompagnée de Marc Dubois, le fondateur de FormaPro Conseil, parce que ça vaut vraiment la peine qu'on se parle. Et nous, ce n'est pas pendant trois ans. On a des demandes, aujourd'hui, on bricole. Comme c'est un outil qui est extraordinaire, avec notre bricolage, ça tourne bien, donc on a des demandes. Et voilà, on n'est pas bricoleurs professionnels, donc il nous faut un partenaire. Comme je vous disais, on aime bien la marque blanche, mais et encore, on peut vraiment discuter de beaucoup de choses. Ce qui nous c'est très simple, ce qui est important pour nous, on a plusieurs clients potentiellement très intéressés, on a envie de l'intégrer de plus en plus. Vous l'avez vu sur mon LinkedIn, la démarche IA, elle s'intègre dans les méthodes commerciales. Une évidence, donc vous, c'est une suite logique pour l'accompagnement managérial, pour la montée en compétences. Donc nous, ce serait pour plusieurs cibles, piloté par Practice, avec voilà, donc la difficulté va peut-être être la mise en place, sauf que nous, on travaille les méthodes de vente, donc ce sera très clair."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 2585280,
+      "end_ms": 2586000,
+      "text": "Non, mais ça, c'est très clair."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 2586000,
+      "end_ms": 2596140,
+      "text": "On s'est un peu réorganisés. Bon, après, c'est clair, je vous ferai un outil pour notre business, donc il ne faut pas que vous nous crevez avec vos exigences financières."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 2596620,
+      "end_ms": 2657880,
+      "text": "Absolument, absolument. Mais de toute manière, enfin, c'est ce que vous avez dit, on trouvera, je pense, on pourra discuter, nous aussi, on est très flexibles à d'autres, j'allais dire à d'autres business models, à d'autres types d'implémentation. On a commencé à travailler avec pas mal de formateurs, donc plus d'indépendants, moins de bien structurés, qui, eux, étaient pas mal en apporteurs d'affaires, mais bon, vu qu'eux demandaient beaucoup de ils voulaient faire la vente, donc ils demandaient beaucoup de documentation. En fait, c'est eux qui vendaient, mais après, ce n'était pas forcément eux qui remplissaient la structure, ce n'était pas pour soutenir leur business, c'était vraiment pour juste faire de la vente en plus, pour faire du chiffre en plus pour eux. Donc ça, on a arrêté parce que ça nous prenait trop de temps à suivre. Donc moi, je n'étais pas je devenais manager de formateurs qui vendaient notre solution, et ce n'est pas ce que je voulais faire. Moi, j'étais concentré sur la vente. Donc très focus, donc il y a ça aussi, mais je pense qu'on a matière à faire à travailler ensemble et à avoir une synergie. Je vois très bien votre problématique, en fait. C'est vraiment bien l'intérêt, il y a de la demande, mais vous avez besoin d'un outil qui est mis en production, qui marche à échelle, quoi."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 2659440,
+      "end_ms": 2661660,
+      "text": "Voilà. Alors, cherchons une date."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 2662020,
+      "end_ms": 2662320,
+      "text": "Très bien."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 2663760,
+      "end_ms": 2665020,
+      "text": "Quand est-ce que vous êtes dispo?"
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 2668680,
+      "end_ms": 2678100,
+      "text": "La semaine du la deuxième semaine, donc la semaine du 12, je serai dispo à partir du mercredi."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 2680320,
+      "end_ms": 2681340,
+      "text": "Petite vacance de Noël."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 2682840,
+      "end_ms": 2705100,
+      "text": "Non, on rentre, mais on est un peu sous l'eau à partir du 5 janvier, là. En fait, tous les réseaux qu'on lance, on a fait tout le back-office là maintenant, mais on lance sur le terrain toutes les formations que je vous ai dites, on lance le 5, enfin, le janvier. Donc première semaine, on lance trois clients encore. Donc on est en les Alpes, une ville du Sud, Lyon, une ville du Sud-Ouest, une ville de l'Ouest."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 2706660,
+      "end_ms": 2716800,
+      "text": "Nous, on est à Lyon physiquement, mais bon, on oublie un peu un peu partout. Vous êtes attaché aux horaires de bureau classiques ou on peut se faire?"
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 2717700,
+      "end_ms": 2718720,
+      "text": "Vous êtes basé à Lyon?"
+    },
+    {
+      "speaker": "client",
+      "start_ms": 2719320,
+      "end_ms": 2719500,
+      "text": "Oui."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 2720040,
+      "end_ms": 2729640,
+      "text": "Parce que du coup, j'y serai le mercredi 7 janvier. Je serai dispo l'après-midi. Moi, je ne suis pas attaché du tout à des horaires."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 2729820,
+      "end_ms": 2741580,
+      "text": "Le mercredi 7, moi, je serai à Lyon, pas à Marc, mais je prendrai le train le soir pour Paris. Donc on peut se voir le mercredi 7 si vous voulez, si vous voulez."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 2741700,
+      "end_ms": 2748420,
+      "text": "Oui, oui. Mercredi 7, moi, je suis à Lyon. Sinon, s'il y a d'autres moments où vous êtes à Paris, nous, on est basé à Paris. Donc."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 2748900,
+      "end_ms": 2773320,
+      "text": "Oui. On est des SP sans bureau fixe. On est là où donc, alors, revenons. Nous, on est blindés jusqu'au 22 inclus, 23. Ensuite, on est dispo tout le temps. Si vous dites le 7 l'après-midi, vous êtes disponible à Lyon, et moi, je suis à Lyon, dans ce cas-là, je hop pour le rendez-vous physique."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 2773560,
+      "end_ms": 2773860,
+      "text": "Parfait."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 2774940,
+      "end_ms": 2779680,
+      "text": "Marc, il sera à Paris, mais on va bien se préparer avant et voilà."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 2779980,
+      "end_ms": 2782800,
+      "text": "Okay, parfait. Tac, tac, tac."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 2782860,
+      "end_ms": 2783760,
+      "text": "On dit 14 h?"
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 2784540,
+      "end_ms": 2785740,
+      "text": "Oui, 14 h, c'est parfait."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 2787180,
+      "end_ms": 2788920,
+      "text": "Donc on fait AI SalesAI."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 2789280,
+      "end_ms": 2797620,
+      "text": "C'est ça. De toute façon, j'ai votre email, je vous envoie la je vous mets l'invitation. Juste, envoyez-moi l'adresse à laquelle on se retrouve."
+    },
+    {
+      "speaker": "client",
+      "start_ms": 2798040,
+      "end_ms": 2815860,
+      "text": "Oui. On va faire ça chez un coworking. C'est un coworking, ça s'appelle, il y en a partout, vous connaissez peut-être déjà, c'est des coworking, on a nos bureaux là-bas, et c'est un espace de coworking à Lyon. C'est une adresse a Lyon, mais je vous l'envoie. Si vous m'envoyez un mail, je vous reprends."
+    },
+    {
+      "speaker": "commercial",
+      "start_ms": 2815980,
+      "end_ms": 2825460,
+      "text": "Oui, je vous envoie ça tout de suite. Okay, c'est noté. Je vous envoie l'invitation et vous m'envoyez l'adresse, et on se revoit en janvier, du coup. Tac."
+    }
+  ]
+}��"(996a410f24ac3af52efca0169f0bd5f23d5a6e4c2Pfile:///home/epitech/technicalTest/coach-training-simulator/meeting-details.json:;file:///home/epitech/technicalTest/coach-training-simulator

@@ -1,0 +1,21 @@
+ñ{
+    "name": "coach-training-simulator",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "concurrently \"node server/server.js\" \"vite\"",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "concurrently": "^9.1.2",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.7",
+        "express": "^4.21.2",
+        "openai": "^4.77.0"
+    },
+    "devDependencies": {
+        "vite": "^6.0.7"
+    }
+}ñ"(996a410f24ac3af52efca0169f0bd5f23d5a6e4c2Hfile:///home/epitech/technicalTest/coach-training-simulator/package.json:;file:///home/epitech/technicalTest/coach-training-simulator
