@@ -19,7 +19,9 @@ import {
   STATES,
 } from '../modules/trainingEngine.js';
 
-import { getTrainingPriorities } from '../modules/meetingAnalyzer.js';
+import { getMarkers } from '../modules/planLoader.js';
+import { getTrainingPriorities, getEvaluationMap } from '../modules/meetingAnalyzer.js';
+import { renderRadarChart } from '../components/radarChart.js';
 
 import { simulateClient, evaluateResponse } from '../services/aiService.js';
 import {
@@ -330,6 +332,30 @@ function showComplete() {
 
   const summary = getSessionSummary(session);
 
+  // Prepare data for Radar Chart (Merge original + new scores)
+  const allMarkers = getMarkers();
+  const originalEvalMap = getEvaluationMap();
+
+  const radarData = allMarkers.map(marker => {
+    // 1. Try to find score from THIS session
+    const sessionResult = session.results.find(r => r.marker.title === marker.title);
+
+    let score = 0;
+    if (sessionResult && sessionResult.evaluation) {
+      score = sessionResult.evaluation.score;
+    } else {
+      // 2. Fallback to original meeting score
+      const originalEval = originalEvalMap.get(marker.title);
+      score = originalEval ? originalEval.grade : 0;
+    }
+
+    return {
+      label: marker.title,
+      value: score,
+      maxValue: 5
+    };
+  });
+
   completeDiv.innerHTML = `
     <div class="session-complete">
       <div style="font-size: 4rem; margin-bottom: 16px;">🏆</div>
@@ -368,12 +394,37 @@ function showComplete() {
       </div>
 
       <div style="margin-top: 32px;">
-        <button class="btn btn-primary" id="btn-restart">
-          🔄 Recommencer l'entraînement
-        </button>
+        <!-- Bottom: Global Radar Chart (Centered) -->
+        <div style="max-width: 600px; margin: 0 auto; width: 100%;">
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                         <div class="card-title">Progression Globale</div>
+                         <div class="card-subtitle">Scores mis à jour</div>
+                    </div>
+                </div>
+                <div class="radar-container" style="padding: 0; display: flex; justify-content: center;">
+                    <canvas id="completion-radar-chart"></canvas>
+                </div>
+                 <div style="text-align: center; margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border-subtle);">
+                     <div class="stat-value gradient-text">${summary.averageScore}/5</div>
+                     <div class="stat-label">Moyenne session</div>
+                 </div>
+            </div>
+            
+             <div style="margin-top: 32px; text-align: center;">
+                <button class="btn btn-primary" id="btn-restart" style="width: 100%;">
+                  🔄 Recommencer l'entraînement
+                </button>
+             </div>
+        </div>
       </div>
     </div>
   `;
+
+  // Render Radar Chart with larger size
+  const canvas = completeDiv.querySelector('#completion-radar-chart');
+  renderRadarChart(canvas, radarData, { size: 480 });
 
   completeDiv.querySelector('#btn-restart').addEventListener('click', () => {
     const trainingContainer = document.getElementById('tab-training');
