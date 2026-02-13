@@ -18,10 +18,18 @@ export const STATES = {
 
 /**
  * Creates a new training session instance.
+ * @param {Object} options - Configuration options
+ * @param {string} options.filter - 'all' or 'weak_only'
  * @returns {TrainingSession}
  */
-export function createSession() {
-    const priorities = getTrainingPriorities();
+export function createSession(options = {}) {
+    let priorities = getTrainingPriorities();
+
+    if (options.filter === 'weak_only') {
+        priorities = priorities.filter(
+            (p) => p.priority === 'missed' || p.priority === 'weak'
+        );
+    }
 
     const session = {
         state: STATES.IDLE,

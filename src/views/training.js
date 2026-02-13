@@ -6,24 +6,26 @@
  */
 
 import {
-    createSession,
-    startSession,
-    beginTraining,
-    getCurrentMarker,
-    submitResponse,
-    addClientResponse,
-    recordEvaluation,
-    nextMarker,
-    getProgress,
-    getSessionSummary,
-    STATES,
+  createSession,
+  startSession,
+  beginTraining,
+  getCurrentMarker,
+  submitResponse,
+  addClientResponse,
+  recordEvaluation,
+  nextMarker,
+  getProgress,
+  getSessionSummary,
+  STATES,
 } from '../modules/trainingEngine.js';
+
+import { getTrainingPriorities } from '../modules/meetingAnalyzer.js';
 
 import { simulateClient, evaluateResponse } from '../services/aiService.js';
 import {
-    createChatBubble,
-    createTypingIndicator,
-    removeTypingIndicator,
+  createChatBubble,
+  createTypingIndicator,
+  removeTypingIndicator,
 } from '../components/chatBubble.js';
 
 let session = null;
@@ -33,9 +35,10 @@ let session = null;
  * @param {HTMLElement} container
  */
 export function renderTraining(container) {
-    session = createSession();
+  // Session is created on start, not render
+  // session = createSession();
 
-    container.innerHTML = `
+  container.innerHTML = `
     <div class="training-container">
       <div class="training-header">
         <h2>🎯 Simulateur d'Entraînement</h2>
@@ -50,8 +53,11 @@ export function renderTraining(container) {
           L'entraînement suit votre plan de vente et priorise les marqueurs où vous avez le plus besoin de progresser.
           Un client virtuel répondra à vos arguments.
         </p>
-        <button class="btn btn-primary" id="btn-start-training">
-          Commencer l'entraînement
+        <button class="btn btn-primary" id="btn-start-training" style="margin-right: 16px;">
+          Commencer l'entraînement complet
+        </button>
+        <button class="btn btn-secondary" id="btn-start-weak-training">
+          S'entraîner sur les points faibles
         </button>
       </div>
 
@@ -98,66 +104,83 @@ export function renderTraining(container) {
     </div>
   `;
 
-    // Event listeners
-    container.querySelector('#btn-start-training').addEventListener('click', () => {
-        handleStart();
-    });
+  // Event listeners
+  container.querySelector('#btn-start-training').addEventListener('click', () => {
+    handleStart({ filter: 'all' });
+  });
 
-    container.querySelector('#btn-send').addEventListener('click', () => {
-        handleSend();
-    });
+  const btnWeak = container.querySelector('#btn-start-weak-training');
+  const weakCount = getTrainingPriorities().filter(
+    (p) => p.priority === 'missed' || p.priority === 'weak'
+  ).length;
 
-    container.querySelector('#chat-input').addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' && !e.shiftKey) {
-            e.preventDefault();
-            handleSend();
-        }
-    });
+  if (weakCount === 0) {
+    btnWeak.disabled = true;
+    btnWeak.title = "Aucun point faible détecté ! Bravo !";
+    btnWeak.style.opacity = "0.5";
+    btnWeak.style.cursor = "not-allowed";
+  }
 
-    container.querySelector('#btn-next-marker').addEventListener('click', () => {
-        handleNextMarker();
-    });
+  btnWeak.addEventListener('click', () => {
+    handleStart({ filter: 'weak_only' });
+  });
+
+  container.querySelector('#btn-send').addEventListener('click', () => {
+    handleSend();
+  });
+
+  container.querySelector('#chat-input').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSend();
+    }
+  });
+
+  container.querySelector('#btn-next-marker').addEventListener('click', () => {
+    handleNextMarker();
+  });
 }
 
-function handleStart() {
-    startSession(session);
-    beginTraining(session);
+function handleStart(options = {}) {
+  session = createSession(options);
+  startSession(session);
+  beginTraining(session);
 
-    document.getElementById('training-start').style.display = 'none';
-    document.getElementById('training-active').style.display = 'block';
+  document.getElementById('training-start').style.display = 'none';
+  document.getElementById('training-active').style.display = 'block';
 
-    renderCurrentMarker();
-    addSystemMessage('L\'entraînement commence. Répondez comme si vous étiez en rendez-vous client.');
-    showClientOpener();
+  renderCurrentMarker();
+  addSystemMessage('L\'entraînement commence. Répondez comme si vous étiez en rendez-vous client.');
+  showClientOpener();
 }
 
 function renderCurrentMarker() {
-    const current = getCurrentMarker(session);
-    if (!current) return;
+  const current = getCurrentMarker(session);
+  if (!current) return;
 
-    const progress = getProgress(session);
-    document.getElementById('progress-label').textContent =
-        `Étape ${progress.current} / ${progress.total}`;
-    document.getElementById('progress-pct').textContent =
-        `${progress.percentage}%`;
-    document.getElementById('progress-fill').style.width =
-        `${progress.percentage}%`;
+  const progress = getProgress(session);
+  document.getElementById('progress-label').textContent =
+    `Étape ${progress.current} / ${progress.total}`;
+  document.getElementById('progress-pct').textContent =
+    `${progress.percentage}%`;
+  document.getElementById('progress-fill').style.width =
+    `${progress.percentage}%`;
 
-    const ctx = document.getElementById('marker-context');
-    const priorityColors = {
-        missed: 'var(--priority-missed)',
-        weak: 'var(--priority-weak)',
-        ok: 'var(--priority-ok)',
-        strong: 'var(--priority-strong)',
-    };
-    const priorityLabels = {
-        missed: '🔴 Non détecté',
-        weak: '🟡 À améliorer',
-        ok: '🔵 Correct',
-        strong: '🟢 Maîtrisé',
-    };
+  const ctx = document.getElementById('marker-context');
+  const priorityColors = {
+    missed: 'var(--priority-missed)',
+    weak: 'var(--priority-weak)',
+    ok: 'var(--priority-ok)',
+    strong: 'var(--priority-strong)',
+  };
+  const priorityLabels = {
+    missed: '🔴 Non détecté',
+    weak: '🟡 À améliorer',
+    ok: '🔵 Correct',
+    strong: '🟢 Maîtrisé',
+  };
 
-    ctx.innerHTML = `
+  ctx.innerHTML = `
     <div class="marker-context-title">
       <span style="color: ${priorityColors[current.priority]}">
         ${priorityLabels[current.priority]}
@@ -168,93 +191,93 @@ function renderCurrentMarker() {
     <div class="marker-context-desc">${current.marker.short_description}</div>
   `;
 
-    // Reset input state
-    document.getElementById('chat-input-container').style.display = 'flex';
-    document.getElementById('eval-controls').style.display = 'none';
-    document.getElementById('chat-input').value = '';
-    document.getElementById('chat-input').focus();
+  // Reset input state
+  document.getElementById('chat-input-container').style.display = 'flex';
+  document.getElementById('eval-controls').style.display = 'none';
+  document.getElementById('chat-input').value = '';
+  document.getElementById('chat-input').focus();
 }
 
 async function showClientOpener() {
-    const current = getCurrentMarker(session);
-    if (!current) return;
+  const current = getCurrentMarker(session);
+  if (!current) return;
 
-    // Show typing indicator
-    const chatArea = document.getElementById('chat-area');
-    chatArea.appendChild(createTypingIndicator());
-    scrollChatToBottom();
+  // Show typing indicator
+  const chatArea = document.getElementById('chat-area');
+  chatArea.appendChild(createTypingIndicator());
+  scrollChatToBottom();
 
-    // Get AI client opener
-    const clientResponse = await simulateClient(current.marker, []);
-    removeTypingIndicator();
+  // Get AI client opener
+  const clientResponse = await simulateClient(current.marker, []);
+  removeTypingIndicator();
 
-    addClientResponse(session, clientResponse);
+  addClientResponse(session, clientResponse);
 
-    const bubble = createChatBubble('client', clientResponse);
-    chatArea.appendChild(bubble);
-    scrollChatToBottom();
+  const bubble = createChatBubble('client', clientResponse);
+  chatArea.appendChild(bubble);
+  scrollChatToBottom();
 }
 
 async function handleSend() {
-    const input = document.getElementById('chat-input');
-    const text = input.value.trim();
-    if (!text) return;
+  const input = document.getElementById('chat-input');
+  const text = input.value.trim();
+  if (!text) return;
 
-    if (session.state !== STATES.ACTIVE_MARKER) return;
+  if (session.state !== STATES.ACTIVE_MARKER) return;
 
-    input.value = '';
+  input.value = '';
 
-    // Add user bubble
-    const chatArea = document.getElementById('chat-area');
-    chatArea.appendChild(createChatBubble('user', text));
-    scrollChatToBottom();
+  // Add user bubble
+  const chatArea = document.getElementById('chat-area');
+  chatArea.appendChild(createChatBubble('user', text));
+  scrollChatToBottom();
 
-    // Submit to engine
-    submitResponse(session, text);
+  // Submit to engine
+  submitResponse(session, text);
 
-    // Disable input while evaluating
-    input.disabled = true;
-    document.getElementById('btn-send').disabled = true;
+  // Disable input while evaluating
+  input.disabled = true;
+  document.getElementById('btn-send').disabled = true;
 
-    // Show typing indicator for AI evaluation
-    chatArea.appendChild(createTypingIndicator());
-    scrollChatToBottom();
+  // Show typing indicator for AI evaluation
+  chatArea.appendChild(createTypingIndicator());
+  scrollChatToBottom();
 
-    // Evaluate
-    const current = getCurrentMarker(session);
-    const evaluation = await evaluateResponse(text, current.marker);
-    removeTypingIndicator();
+  // Evaluate
+  const current = getCurrentMarker(session);
+  const evaluation = await evaluateResponse(text, current.marker);
+  removeTypingIndicator();
 
-    // Record evaluation
-    recordEvaluation(session, evaluation);
+  // Record evaluation
+  recordEvaluation(session, evaluation);
 
-    // Show evaluation card
-    showEvaluation(evaluation);
+  // Show evaluation card
+  showEvaluation(evaluation);
 
-    // Show next button or complete
-    if (session.state === STATES.COMPLETE) {
-        setTimeout(() => showComplete(), 1500);
-    } else {
-        document.getElementById('chat-input-container').style.display = 'none';
-        document.getElementById('eval-controls').style.display = 'block';
-    }
+  // Show next button or complete
+  if (session.state === STATES.COMPLETE) {
+    setTimeout(() => showComplete(), 1500);
+  } else {
+    document.getElementById('chat-input-container').style.display = 'none';
+    document.getElementById('eval-controls').style.display = 'block';
+  }
 }
 
 function showEvaluation(evaluation) {
-    const chatArea = document.getElementById('chat-area');
+  const chatArea = document.getElementById('chat-area');
 
-    const evalCard = document.createElement('div');
-    evalCard.className = 'evaluation-card';
+  const evalCard = document.createElement('div');
+  evalCard.className = 'evaluation-card';
 
-    const scoreColor = evaluation.score >= 4
-        ? 'var(--color-success)'
-        : evaluation.score >= 3
-            ? 'var(--color-info)'
-            : evaluation.score >= 2
-                ? 'var(--color-warning)'
-                : 'var(--color-danger)';
+  const scoreColor = evaluation.score >= 4
+    ? 'var(--color-success)'
+    : evaluation.score >= 3
+      ? 'var(--color-info)'
+      : evaluation.score >= 2
+        ? 'var(--color-warning)'
+        : 'var(--color-danger)';
 
-    evalCard.innerHTML = `
+  evalCard.innerHTML = `
     <div class="evaluation-header">
       <div class="evaluation-score" style="color: ${scoreColor}">${evaluation.score}/5</div>
       <div class="evaluation-score-label">Évaluation de cette étape</div>
@@ -279,35 +302,35 @@ function showEvaluation(evaluation) {
     </div>
   `;
 
-    chatArea.appendChild(evalCard);
-    scrollChatToBottom();
+  chatArea.appendChild(evalCard);
+  scrollChatToBottom();
 }
 
 function handleNextMarker() {
-    nextMarker(session);
+  nextMarker(session);
 
-    // Clear chat
-    const chatArea = document.getElementById('chat-area');
-    chatArea.innerHTML = '';
+  // Clear chat
+  const chatArea = document.getElementById('chat-area');
+  chatArea.innerHTML = '';
 
-    // Re-enable input
-    const input = document.getElementById('chat-input');
-    input.disabled = false;
-    document.getElementById('btn-send').disabled = false;
+  // Re-enable input
+  const input = document.getElementById('chat-input');
+  input.disabled = false;
+  document.getElementById('btn-send').disabled = false;
 
-    renderCurrentMarker();
-    addSystemMessage('Passons au marqueur suivant. Continuez votre argumentaire.');
-    showClientOpener();
+  renderCurrentMarker();
+  addSystemMessage('Passons au marqueur suivant. Continuez votre argumentaire.');
+  showClientOpener();
 }
 
 function showComplete() {
-    document.getElementById('training-active').style.display = 'none';
-    const completeDiv = document.getElementById('training-complete');
-    completeDiv.style.display = 'block';
+  document.getElementById('training-active').style.display = 'none';
+  const completeDiv = document.getElementById('training-complete');
+  completeDiv.style.display = 'block';
 
-    const summary = getSessionSummary(session);
+  const summary = getSessionSummary(session);
 
-    completeDiv.innerHTML = `
+  completeDiv.innerHTML = `
     <div class="session-complete">
       <div style="font-size: 4rem; margin-bottom: 16px;">🏆</div>
       <h2>Entraînement terminé !</h2>
@@ -318,17 +341,17 @@ function showComplete() {
       
       <div class="results-grid">
         ${summary.results
-            .map((r) => {
-                const score = r.evaluation ? r.evaluation.score : 0;
-                const scoreColor =
-                    score >= 4
-                        ? 'var(--color-success)'
-                        : score >= 3
-                            ? 'var(--color-info)'
-                            : score >= 2
-                                ? 'var(--color-warning)'
-                                : 'var(--color-danger)';
-                return `
+      .map((r) => {
+        const score = r.evaluation ? r.evaluation.score : 0;
+        const scoreColor =
+          score >= 4
+            ? 'var(--color-success)'
+            : score >= 3
+              ? 'var(--color-info)'
+              : score >= 2
+                ? 'var(--color-warning)'
+                : 'var(--color-danger)';
+        return `
               <div class="card" style="padding: 16px;">
                 <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
                   <div class="score-badge score-${Math.round(score)}">${score}</div>
@@ -340,8 +363,8 @@ function showComplete() {
                 ${r.evaluation ? `<div style="font-size: 0.75rem; color: var(--text-muted);">${r.evaluation.advice}</div>` : ''}
               </div>
             `;
-            })
-            .join('')}
+      })
+      .join('')}
       </div>
 
       <div style="margin-top: 32px;">
@@ -352,19 +375,19 @@ function showComplete() {
     </div>
   `;
 
-    completeDiv.querySelector('#btn-restart').addEventListener('click', () => {
-        const trainingContainer = document.getElementById('tab-training');
-        renderTraining(trainingContainer);
-    });
+  completeDiv.querySelector('#btn-restart').addEventListener('click', () => {
+    const trainingContainer = document.getElementById('tab-training');
+    renderTraining(trainingContainer);
+  });
 }
 
 function addSystemMessage(text) {
-    const chatArea = document.getElementById('chat-area');
-    chatArea.appendChild(createChatBubble('system', text));
-    scrollChatToBottom();
+  const chatArea = document.getElementById('chat-area');
+  chatArea.appendChild(createChatBubble('system', text));
+  scrollChatToBottom();
 }
 
 function scrollChatToBottom() {
-    const chatArea = document.getElementById('chat-area');
-    chatArea.scrollTop = chatArea.scrollHeight;
+  const chatArea = document.getElementById('chat-area');
+  chatArea.scrollTop = chatArea.scrollHeight;
 }
