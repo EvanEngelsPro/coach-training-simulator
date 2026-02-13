@@ -159,10 +159,24 @@ export function getPerformanceSummary() {
 }
 
 /**
- * Returns the meeting feedback markdown.
+ * Returns structured meeting feedback by parsing the markdown content.
+ * @returns {{summary: string|null, nextSteps: string|null, raw: string}}
  */
 export function getMeetingFeedback() {
-    return meeting.feedback;
+    const raw = meeting.feedback;
+
+    const extractSection = (title) => {
+        // Match content after "## Title" until the next "##" or end of string
+        const regex = new RegExp(`## ${title}\\n([\\s\\S]*?)(?=\\n##|$)`);
+        const match = raw.match(regex);
+        return match ? match[1].trim() : null;
+    };
+
+    return {
+        summary: extractSection('Résumé exécutif'),
+        nextSteps: extractSection('Prochaines étapes'),
+        raw: raw
+    };
 }
 
 /**

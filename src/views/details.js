@@ -26,7 +26,7 @@ export function renderDetails(container) {
     <div class="details-section">
       <div class="details-section-title">📋 Résumé du meeting</div>
       <div class="card">
-        <div style="display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 16px;">
+        <div style="display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 24px;">
           <div>
             <span style="color: var(--text-muted); font-size: 0.75rem;">Client</span>
             <div style="font-weight: 600;">${summary.meetingTitle}</div>
@@ -42,6 +42,26 @@ export function renderDetails(container) {
           <div>
             <span style="color: var(--text-muted); font-size: 0.75rem;">Moyenne</span>
             <div style="font-weight: 600;">${summary.averageGrade} / ${summary.maxGrade}</div>
+          </div>
+        </div>
+
+        <div class="feedback-content">
+          <div style="margin-bottom: 16px;">
+            <strong style="color: var(--text-accent); display: block; margin-bottom: 8px;">Résumé exécutif</strong>
+            <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.9rem;">
+              ${getMeetingFeedback().summary || 'Aucun résumé disponible.'}
+            </p>
+          </div>
+          
+          <div>
+             <strong style="color: var(--text-accent); display: block; margin-bottom: 8px;">Prochaines étapes</strong>
+             <ul style="color: var(--text-secondary); line-height: 1.6; font-size: 0.9rem; padding-left: 20px;">
+               ${(getMeetingFeedback().nextSteps || '')
+      .split('\n')
+      .filter(line => line.trim())
+      .map(line => `<li>${line.replace(/^\d+\.\s*|-\s*/, '')}</li>`)
+      .join('')}
+             </ul>
           </div>
         </div>
       </div>
