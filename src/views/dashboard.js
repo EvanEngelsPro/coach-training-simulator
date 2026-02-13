@@ -57,6 +57,19 @@ export function renderDashboard(container) {
         <div class="radar-container">
           <canvas id="radar-chart"></canvas>
         </div>
+
+        <!-- Post-Training Radar (Hidden by default) -->
+        <div id="post-training-container" style="display: none; margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border-subtle);">
+            <div class="card-header">
+              <div>
+                <div class="card-title" style="font-size: 1rem; color: var(--text-accent);">Après Entraînement</div>
+                <div class="card-subtitle" id="post-training-date"></div>
+              </div>
+            </div>
+            <div class="radar-container">
+              <canvas id="post-training-radar-chart"></canvas>
+            </div>
+        </div>
       </div>
 
       <!-- Gap Analysis -->
@@ -127,5 +140,30 @@ export function renderDashboard(container) {
         createMarkerCard(p.marker, p.evaluation, p.priority)
       );
     });
+  }
+
+  // Render Post-Training Radar
+  const savedData = localStorage.getItem('training_radar_data');
+  if (savedData) {
+    try {
+      const parsed = JSON.parse(savedData);
+      const postContainer = container.querySelector('#post-training-container');
+      if (postContainer) {
+        postContainer.style.display = 'block';
+
+        const dateElem = container.querySelector('#post-training-date');
+        const date = new Date(parsed.date);
+        if (dateElem) {
+          dateElem.textContent = `Simulé le ${date.toLocaleDateString()} à ${date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
+        }
+
+        const postCanvas = container.querySelector('#post-training-radar-chart');
+        if (postCanvas) {
+          renderRadarChart(postCanvas, parsed.data, { size: 420 });
+        }
+      }
+    } catch (e) {
+      console.error('Failed to load training data', e);
+    }
   }
 }

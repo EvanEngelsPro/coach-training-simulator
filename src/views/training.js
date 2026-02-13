@@ -356,6 +356,16 @@ function showComplete() {
     };
   });
 
+  // Save to localStorage for Dashboard
+  localStorage.setItem('training_radar_data', JSON.stringify({
+    date: new Date().toISOString(),
+    data: radarData,
+    summary: {
+      averageScore: summary.averageScore,
+      completedMarkers: summary.completedMarkers
+    }
+  }));
+
   completeDiv.innerHTML = `
     <div class="session-complete">
       <div style="font-size: 4rem; margin-bottom: 16px;">🏆</div>
