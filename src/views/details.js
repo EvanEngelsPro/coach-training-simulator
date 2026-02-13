@@ -145,31 +145,65 @@ export function renderDetails(container) {
 
   // Build transcript display
   const transcriptDisplay = container.querySelector('#transcript-display');
-  const firstSegments = transcript.slice(0, 50); // Show first 50 segments
+  let currentLimit = 50;
 
-  firstSegments.forEach((seg) => {
-    const div = document.createElement('div');
-    div.className = 'transcript-segment';
+  const renderSegments = (start, end) => {
+    const segments = transcript.slice(start, end);
+    segments.forEach((seg) => {
+      const div = document.createElement('div');
+      div.className = 'transcript-segment';
 
-    const startMin = Math.floor(seg.start_ms / 60000);
-    const startSec = Math.floor((seg.start_ms % 60000) / 1000);
-    const timeStr = `${startMin}:${startSec.toString().padStart(2, '0')}`;
+      const startMin = Math.floor(seg.start_ms / 60000);
+      const startSec = Math.floor((seg.start_ms % 60000) / 1000);
+      const timeStr = `${startMin}:${startSec.toString().padStart(2, '0')}`;
 
-    div.innerHTML = `
-      <div style="display: flex; align-items: baseline; gap: 8px;">
-        <span class="transcript-time">${timeStr}</span>
-        <span class="transcript-speaker ${seg.speaker}">${seg.speaker === 'commercial' ? 'Commercial' : 'Client'}</span>
-      </div>
-      <div class="transcript-text">${seg.text}</div>
-    `;
+      div.innerHTML = `
+        <div style="display: flex; align-items: baseline; gap: 8px;">
+          <span class="transcript-time">${timeStr}</span>
+          <span class="transcript-speaker ${seg.speaker}">${seg.speaker === 'commercial' ? 'Commercial' : 'Client'}</span>
+        </div>
+        <div class="transcript-text">${seg.text}</div>
+      `;
+      transcriptDisplay.appendChild(div);
+    });
+  };
 
-    transcriptDisplay.appendChild(div);
-  });
+  // Initial render
+  renderSegments(0, Math.min(currentLimit, transcript.length));
 
-  if (transcript.length > 50) {
-    const more = document.createElement('div');
-    more.style.cssText = 'text-align: center; padding: 16px; color: var(--text-muted); font-size: 0.75rem;';
-    more.textContent = `… et ${transcript.length - 50} segments supplémentaires`;
-    transcriptDisplay.appendChild(more);
+  // Load More Button
+  if (transcript.length > currentLimit) {
+    const loadMoreContainer = document.createElement('div');
+    loadMoreContainer.style.textAlign = 'center';
+    loadMoreContainer.style.padding = '16px';
+
+    const loadMoreBtn = document.createElement('button');
+    loadMoreBtn.className = 'btn'; // Utilizing existing btn class for styling
+    loadMoreBtn.style.cssText = 'background: rgba(255, 255, 255, 0.05); color: var(--text-secondary); font-size: 0.8rem; border: 1px solid rgba(255, 255, 255, 0.1); padding: 8px 16px; border-radius: 20px; cursor: pointer; transition: all 0.2s;';
+
+    const updateButtonText = () => {
+      const remaining = Math.max(0, transcript.length - currentLimit);
+      loadMoreBtn.textContent = `Afficher les 50 suivants (${remaining} restants)`;
+    };
+
+    updateButtonText();
+
+    loadMoreBtn.onmouseover = () => { loadMoreBtn.style.background = 'rgba(255, 255, 255, 0.1)'; };
+    loadMoreBtn.onmouseout = () => { loadMoreBtn.style.background = 'rgba(255, 255, 255, 0.05)'; };
+
+    loadMoreBtn.onclick = () => {
+      const nextLimit = currentLimit + 50;
+      renderSegments(currentLimit, Math.min(nextLimit, transcript.length));
+      currentLimit = nextLimit;
+
+      if (currentLimit >= transcript.length) {
+        loadMoreContainer.remove();
+      } else {
+        updateButtonText();
+      }
+    };
+
+    loadMoreContainer.appendChild(loadMoreBtn);
+    transcriptDisplay.parentNode.appendChild(loadMoreContainer);
   }
 }
