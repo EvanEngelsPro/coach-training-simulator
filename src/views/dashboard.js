@@ -8,10 +8,10 @@ import { renderRadarChart } from '../components/radarChart.js';
 import { createMarkerCard } from '../components/markerCard.js';
 import { getMarkers } from '../modules/planLoader.js';
 import {
-    getPerformanceSummary,
-    getEvaluationMap,
-    getTrainingPriorities,
-    getMeetingFeedback,
+  getPerformanceSummary,
+  getEvaluationMap,
+  getTrainingPriorities,
+  getMeetingFeedback,
 } from '../modules/meetingAnalyzer.js';
 
 /**
@@ -19,12 +19,12 @@ import {
  * @param {HTMLElement} container
  */
 export function renderDashboard(container) {
-    const summary = getPerformanceSummary();
-    const markers = getMarkers();
-    const evalMap = getEvaluationMap();
-    const priorities = getTrainingPriorities();
+  const summary = getPerformanceSummary();
+  const markers = getMarkers();
+  const evalMap = getEvaluationMap();
+  const priorities = getTrainingPriorities();
 
-    container.innerHTML = `
+  container.innerHTML = `
     <div class="dashboard-grid">
       <!-- Stats Row -->
       <div class="full-width stats-row" id="stats-row">
@@ -83,49 +83,49 @@ export function renderDashboard(container) {
     </div>
   `;
 
-    // Render radar chart
-    const radarCanvas = container.querySelector('#radar-chart');
-    if (radarCanvas) {
-        const radarData = markers.map((m) => {
-            const ev = evalMap.get(m.title);
-            return {
-                label: m.title,
-                value: ev ? ev.grade : 0,
-                maxValue: 5,
-            };
-        });
-        renderRadarChart(radarCanvas, radarData, { size: 360 });
-    }
+  // Render radar chart
+  const radarCanvas = container.querySelector('#radar-chart');
+  if (radarCanvas) {
+    const radarData = markers.map((m) => {
+      const ev = evalMap.get(m.title);
+      return {
+        label: m.title,
+        value: ev ? ev.grade : 0,
+        maxValue: 5,
+      };
+    });
+    renderRadarChart(radarCanvas, radarData, { size: 420 });
+  }
 
-    // Render gap analysis (top priorities only)
-    const gapList = container.querySelector('#gap-analysis-list');
-    if (gapList) {
-        const topPriorities = priorities.filter(
-            (p) => p.priority === 'missed' || p.priority === 'weak'
-        );
+  // Render gap analysis (top priorities only)
+  const gapList = container.querySelector('#gap-analysis-list');
+  if (gapList) {
+    const topPriorities = priorities.filter(
+      (p) => p.priority === 'missed' || p.priority === 'weak'
+    );
 
-        if (topPriorities.length === 0) {
-            gapList.innerHTML = `
+    if (topPriorities.length === 0) {
+      gapList.innerHTML = `
         <div style="text-align: center; padding: 24px; color: var(--color-success);">
           ✅ Aucun écart critique détecté. Excellent travail !
         </div>
       `;
-        } else {
-            topPriorities.forEach((p) => {
-                gapList.appendChild(
-                    createMarkerCard(p.marker, p.evaluation, p.priority)
-                );
-            });
-        }
+    } else {
+      topPriorities.forEach((p) => {
+        gapList.appendChild(
+          createMarkerCard(p.marker, p.evaluation, p.priority)
+        );
+      });
     }
+  }
 
-    // Render all markers
-    const markersList = container.querySelector('#markers-list');
-    if (markersList) {
-        priorities.forEach((p) => {
-            markersList.appendChild(
-                createMarkerCard(p.marker, p.evaluation, p.priority)
-            );
-        });
-    }
+  // Render all markers
+  const markersList = container.querySelector('#markers-list');
+  if (markersList) {
+    priorities.forEach((p) => {
+      markersList.appendChild(
+        createMarkerCard(p.marker, p.evaluation, p.priority)
+      );
+    });
+  }
 }

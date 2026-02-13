@@ -4,6 +4,27 @@
  */
 
 /**
+ * Splits a label into multiple lines of max `maxChars` characters,
+ * breaking at word boundaries.
+ */
+function wrapLabel(text, maxChars) {
+    if (text.length <= maxChars) return [text];
+    const words = text.split(' ');
+    const lines = [];
+    let current = '';
+    for (const word of words) {
+        if (current && (current + ' ' + word).length > maxChars) {
+            lines.push(current);
+            current = word;
+        } else {
+            current = current ? current + ' ' + word : word;
+        }
+    }
+    if (current) lines.push(current);
+    return lines;
+}
+
+/**
  * Renders a radar chart on the given canvas element.
  * @param {HTMLCanvasElement} canvas
  * @param {Array<{label: string, value: number, maxValue: number}>} data
@@ -15,7 +36,7 @@ export function renderRadarChart(canvas, data, options = {}) {
 
     const {
         size = 320,
-        padding = 60,
+        padding = 90,
         gridLevels = 5,
         gridColor = 'rgba(255, 255, 255, 0.06)',
         labelColor = '#9ca3af',
@@ -110,48 +131,57 @@ export function renderRadarChart(canvas, data, options = {}) {
         ctx.stroke();
     });
 
-    // Draw labels
+    // Draw labels + values
     ctx.font = labelFont;
     ctx.fillStyle = labelColor;
 
+    const lineHeight = 14;
+
     for (let i = 0; i < numAxes; i++) {
         const angle = startAngle + angleStep * i;
-        const labelRadius = radius + 22;
-        let x = cx + Math.cos(angle) * labelRadius;
-        let y = cy + Math.sin(angle) * labelRadius;
+        const cosA = Math.cos(angle);
+        const sinA = Math.sin(angle);
+        const labelRadius = radius + 18;
+        let x = cx + cosA * labelRadius;
+        let y = cy + sinA * labelRadius;
 
-        // Truncate long labels
-        let label = data[i].label;
-        if (label.length > 16) label = label.substring(0, 14) + '…';
+        // Word-wrap label (max ~18 chars per line)
+        const lines = wrapLabel(data[i].label, 18);
 
-        const metrics = ctx.measureText(label);
-        const textWidth = metrics.width;
-
-        // Align text based on position
-        if (Math.abs(Math.cos(angle)) < 0.1) {
+        // Text alignment based on position around the chart
+        if (Math.abs(cosA) < 0.15) {
             ctx.textAlign = 'center';
-        } else if (Math.cos(angle) > 0) {
+        } else if (cosA > 0) {
             ctx.textAlign = 'left';
         } else {
             ctx.textAlign = 'right';
         }
 
-        if (Math.sin(angle) < -0.5) {
-            y -= 4;
-        } else if (Math.sin(angle) > 0.5) {
-            y += 12;
+        // Vertical offset so labels don't overlap the polygon
+        if (sinA < -0.5) {
+            // Top labels: push up
+            y -= 4 + (lines.length - 1) * lineHeight;
+        } else if (sinA > 0.5) {
+            // Bottom labels: push down
+            y += 14;
         } else {
-            y += 4;
+            // Side labels: vertically center
+            y += 4 - ((lines.length - 1) * lineHeight) / 2;
         }
 
-        ctx.fillText(label, x, y);
+        // Draw each line of the label
+        ctx.font = labelFont;
+        ctx.fillStyle = labelColor;
+        for (let l = 0; l < lines.length; l++) {
+            ctx.fillText(lines[l], x, y + l * lineHeight);
+        }
 
-        // Draw value
+        // Draw value below the last line
         const valText = data[i].value > 0 ? data[i].value.toFixed(1) : '—';
         ctx.save();
         ctx.font = 'bold 10px Inter, sans-serif';
         ctx.fillStyle = data[i].value > 0 ? '#a78bfa' : '#6b7280';
-        const valY = Math.sin(angle) < -0.5 ? y - 14 : y + 14;
+        const valY = y + lines.length * lineHeight;
         ctx.fillText(valText, x, valY);
         ctx.restore();
     }
