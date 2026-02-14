@@ -24,46 +24,46 @@ graph TD
 
 | Module | Role |
 |---|---|
-| [planLoader.js](file:///home/epitech/technicalTest/coach-training-simulator/src/modules/planLoader.js) | Parses 9 sales plan markers |
-| [meetingAnalyzer.js](file:///home/epitech/technicalTest/coach-training-simulator/src/modules/meetingAnalyzer.js) | Cross-references evaluations, computes gaps |
-| [trainingEngine.js](file:///home/epitech/technicalTest/coach-training-simulator/src/modules/trainingEngine.js) | State machine for training sessions |
-| [evaluator.js](file:///home/epitech/technicalTest/coach-training-simulator/src/modules/evaluator.js) | Prompt engineering + mock fallbacks |
-| [aiService.js](file:///home/epitech/technicalTest/coach-training-simulator/src/services/aiService.js) | API calls with graceful degradation |
-| [server.js](file:///home/epitech/technicalTest/coach-training-simulator/server/server.js) | Express proxy to keep API key server-side |
+| [planLoader.js](../src/modules/planLoader.js) | Parses 9 sales plan markers |
+| [meetingAnalyzer.js](../src/modules/meetingAnalyzer.js) | Cross-references evaluations, computes gaps |
+| [trainingEngine.js](../src/modules/trainingEngine.js) | State machine for training sessions |
+| [evaluator.js](../src/modules/evaluator.js) | Prompt engineering + mock fallbacks |
+| [aiService.js](../src/services/aiService.js) | API calls with graceful degradation |
+| [server.js](../server/server.js) | Express proxy to keep API key server-side |
 
 ## Screenshots
 
 ### Dashboard — Performance Analysis
 Radar chart plotting all 9 markers, stat cards, gap priorities.
 
-![Dashboard with radar chart, stats, and gap analysis](/home/epitech/.gemini/antigravity/brain/a7b72375-b6a8-473c-b200-5468f19b1d8b/dashboard_view_1770985730709.png)
+![Dashboard with radar chart, stats, and gap analysis](./images/dashboard_view_1770985730709.png)
 
 ---
 
 ### Training — Chat Simulation
 Client IA sends opening message, user practices their pitch.
 
-![Training session with AI client response](/home/epitech/.gemini/antigravity/brain/a7b72375-b6a8-473c-b200-5468f19b1d8b/training_session_start_1770985857102.png)
+![Training session with AI client response](./images/training_session_start_1770985857102.png)
 
 ---
 
 ### Training — Evaluation Card
 After submitting a response: score, strengths, improvements, actionable advice.
 
-![Evaluation card showing 3/5 score with feedback](/home/epitech/.gemini/antigravity/brain/a7b72375-b6a8-473c-b200-5468f19b1d8b/training_evaluation_card_1770985950475.png)
+![Evaluation card showing 3/5 score with feedback](./images/training_evaluation_card_1770985950475.png)
 
 ---
 
 ### Details — Marker Accordion + Transcript
 Full breakdown of all 9 markers with evaluations and 145-segment transcript.
 
-![Details view with accordion markers](/home/epitech/.gemini/antigravity/brain/a7b72375-b6a8-473c-b200-5468f19b1d8b/details_tab_view_1770985788538.png)
+![Details view with accordion markers](./images/details_tab_view_1770985788538.png)
 
 ## Recordings
 
-![Dashboard navigation test](/home/epitech/.gemini/antigravity/brain/a7b72375-b6a8-473c-b200-5468f19b1d8b/dashboard_recording.webp)
+![Dashboard navigation test](./records/dashboard_recording.webp)
 
-![Training simulation flow test](/home/epitech/.gemini/antigravity/brain/a7b72375-b6a8-473c-b200-5468f19b1d8b/training_recording.webp)
+![Training simulation flow test](./records/training_recording.webp)
 
 ## Verification Results
 

@@ -8,14 +8,14 @@ Optimize your practice time by focusing only on areas that need improvement.
 - Automatically selects markers that were **missed** or scored **2/5 or less**.
 - Shows the exact count of markers in the filtered session (e.g., "6 points faibles").
 
-![Targeted Training Mode](/home/epitech/.gemini/antigravity/brain/a7b72375-b6a8-473c-b200-5468f19b1d8b/weak_point_training_verification_1771005509928.png)
+![Targeted Training Mode](./images/weak_point_training_verification_1771005509928.png)
 
 ### 📈 Global Progression Visualization
 At the end of a targeted training session, view your updated **Global Progression** on a radar chart.
 - Combines your new session results with existing scores for other markers.
 - Provides a comprehensive view of your skills, even when training on a subset of markers.
 
-![Global Progression Radar Chart](/home/epitech/.gemini/antigravity/brain/a7b72375-b6a8-473c-b200-5468f19b1d8b/training_completion_screen_1771008587877.png)
+![Global Progression Radar Chart](./images/training_completion_screen_1771008587877.png)
 
 ### 📊 Dashboard Evolution
 Track your progress over time directly on the main dashboard.
@@ -23,7 +23,7 @@ Track your progress over time directly on the main dashboard.
 - Allows for immediate visual comparison ("Before & After") of your skills.
 - Persists across page reloads (using browser storage).
 
-![Dashboard Comparison](/home/epitech/.gemini/antigravity/brain/a7b72375-b6a8-473c-b200-5468f19b1d8b/dashboard_with_two_charts_1771016475529.png)
+![Dashboard Comparison](./images/dashboard_with_two_charts_1771016475529.png)
 
 ### 📜 Dynamic Transcript Loading
 To improve performance and readability, the meeting transcript now loads incrementally.
@@ -32,14 +32,14 @@ To improve performance and readability, the meeting transcript now loads increme
 - Button updates to show remaining segments (e.g., "95 restants").
 - Automatically hides when all segments are loaded.
 
-![Transcript Load More Button](/home/epitech/.gemini/antigravity/brain/a7b72375-b6a8-473c-b200-5468f19b1d8b/transcript_all_loaded_1771004360530.png)
+![Transcript Load More Button](./images/transcript_all_loaded_1771004360530.png)
 
 ### 📋 Structured Meeting Feedback
 The **Details** tab now parses the raw markdown feedback to display structured sections:
 - **Résumé exécutif**
 - **Prochaines étapes** (Actionable bullet points)
 
-![Details Tab with Structured Feedback](/home/epitech/.gemini/antigravity/brain/a7b72375-b6a8-473c-b200-5468f19b1d8b/details_tab_verification_1771003317459.png)
+![Details Tab with Structured Feedback](./images/details_tab_verification_1771003317459.png)
 
 ## Core Features (Recap)
 
