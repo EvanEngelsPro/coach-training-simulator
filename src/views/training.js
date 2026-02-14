@@ -370,10 +370,26 @@ function showComplete() {
     <div class="session-complete">
       <div style="font-size: 4rem; margin-bottom: 16px;">🏆</div>
       <h2>Entraînement terminé !</h2>
-      <div class="big-score">${summary.averageScore}/5</div>
-      <p style="color: var(--text-secondary); margin-bottom: 8px;">
-        Score moyen sur ${summary.completedMarkers} marqueurs
-      </p>
+      
+      <div style="display: flex; gap: 48px; justify-content: center; margin-bottom: 24px;">
+        <div style="text-align: center;">
+            <div class="big-score">${summary.averageScore}/5</div>
+            <div class="stat-label">Moyenne globale</div>
+        </div>
+        <div style="text-align: center;">
+            <div class="big-score" style="color: var(--text-accent);">
+                ${(() => {
+      const start = new Date(session.startedAt);
+      const end = new Date(session.completedAt);
+      const diff = end - start;
+      const minutes = Math.floor(diff / 60000);
+      const seconds = Math.floor((diff % 60000) / 1000);
+      return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    })()}
+            </div>
+            <div class="stat-label">Durée totale</div>
+        </div>
+      </div>
       
       <div class="results-grid">
         ${summary.results

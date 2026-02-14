@@ -1,0 +1,36 @@
+# Coach Training Simulator — Build Tasks
+
+## Planning
+- [x] Explore data structures ([sales-plan.json](file:///home/epitech/technicalTest/coach-training-simulator/sales-plan.json), [meeting-details.json](file:///home/epitech/technicalTest/coach-training-simulator/meeting-details.json))
+- [x] Understand the README vision (passive feedback → active training)
+- [x] Write implementation plan and get user approval
+
+## Execution — Project Setup
+- [x] Initialize Vite + vanilla JS project
+- [x] Set up design system (CSS variables, Inter font, dark theme)
+- [x] Set up project structure (modules, components, services, server)
+
+## Execution — Core Modules
+- [x] [planLoader.js](file:///home/epitech/technicalTest/coach-training-simulator/src/modules/planLoader.js) — parse and structure markers
+- [x] [meetingAnalyzer.js](file:///home/epitech/technicalTest/coach-training-simulator/src/modules/meetingAnalyzer.js) — extract performance gaps, missed/weak markers
+- [x] [trainingEngine.js](file:///home/epitech/technicalTest/coach-training-simulator/src/modules/trainingEngine.js) — orchestrate simulation session flow
+- [x] [evaluator.js](file:///home/epitech/technicalTest/coach-training-simulator/src/modules/evaluator.js) — score user responses per marker + prompt engineering
+
+## Execution — AI Integration
+- [x] [aiService.js](file:///home/epitech/technicalTest/coach-training-simulator/src/services/aiService.js) — frontend API wrapper with mock fallback
+- [x] [server/server.js](file:///home/epitech/technicalTest/coach-training-simulator/server/server.js) — Express proxy for OpenAI API
+- [x] Mock client responses for each marker
+
+## Execution — UI / Frontend
+- [x] Dashboard — stat cards + radar chart + gap analysis + marker list
+- [x] Training — step-by-step chat simulation interface
+- [x] Details — accordion markers + transcript display
+- [x] Components: radarChart, chatBubble, markerCard
+
+## Verification
+- [x] Dev server runs without errors (Vite + Express concurrently)
+- [x] Dashboard renders correctly (radar, stats, markers)
+- [x] Training simulation works end-to-end (client → user → evaluation)
+- [x] Details view shows accordion with evaluations and transcript
+- [x] No JS console errors
+- [x] Write walkthrough

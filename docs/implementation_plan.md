@@ -38,36 +38,36 @@ Transform Coach from a post-meeting feedback tool into an **active training plat
 
 ### Project Scaffold
 
-#### [NEW] [package.json](file:///home/epitech/technicalTest/coach-training-simulator/package.json)
+#### [NEW] [package.json](../package.json)
 Vite dev server, OpenAI SDK dependency, dotenv.
 
-#### [NEW] [vite.config.js](file:///home/epitech/technicalTest/coach-training-simulator/vite.config.js)
+#### [NEW] [vite.config.js](../vite.config.js)
 Minimal Vite config with proxy for API routes.
 
-#### [NEW] [.env.example](file:///home/epitech/technicalTest/coach-training-simulator/.env.example)
+#### [NEW] [.env.example](../.env.example)
 Template for `OPENAI_API_KEY`.
 
 ---
 
 ### Core Modules (`src/modules/`)
 
-#### [NEW] [planLoader.js](file:///home/epitech/technicalTest/coach-training-simulator/src/modules/planLoader.js)
-- Loads [sales-plan.json](file:///home/epitech/technicalTest/coach-training-simulator/sales-plan.json), normalizes markers into a structured array
+#### [NEW] [planLoader.js](../src/modules/planLoader.js)
+- Loads [sales-plan.json](../sales-plan.json), normalizes markers into a structured array
 - Exposes `getMarkers()`, `getMarkerByTitle(title)`, `getMarkersByOrder()`
 
-#### [NEW] [meetingAnalyzer.js](file:///home/epitech/technicalTest/coach-training-simulator/src/modules/meetingAnalyzer.js)
-- Loads [meeting-details.json](file:///home/epitech/technicalTest/coach-training-simulator/meeting-details.json)
+#### [NEW] [meetingAnalyzer.js](../src/modules/meetingAnalyzer.js)
+- Loads [meeting-details.json](../meeting-details.json)
 - Cross-references evaluations against plan markers
 - Computes: `getMissedMarkers()`, `getWeakMarkers(threshold)`, `getPerformanceSummary()`
 - Generates prioritized training recommendations (missed → low-score → remaining)
 
-#### [NEW] [trainingEngine.js](file:///home/epitech/technicalTest/coach-training-simulator/src/modules/trainingEngine.js)
+#### [NEW] [trainingEngine.js](../src/modules/trainingEngine.js)
 - Orchestrates the simulation session as a state machine
 - States: `IDLE → BRIEFING → ACTIVE_MARKER → EVALUATING → NEXT_MARKER → COMPLETE`
 - Manages marker progression order (worst-first priority)
 - Tracks per-marker user responses and scores
 
-#### [NEW] [evaluator.js](file:///home/epitech/technicalTest/coach-training-simulator/src/modules/evaluator.js)
+#### [NEW] [evaluator.js](../src/modules/evaluator.js)
 - Takes a user response + marker definition → structured score + feedback
 - Uses the marker's `description` as the grading rubric
 - Returns `{ score: 1-5, strengths: [], improvements: [], advice: string }`
@@ -76,7 +76,7 @@ Template for `OPENAI_API_KEY`.
 
 ### AI Service (`src/services/`)
 
-#### [NEW] [aiService.js](file:///home/epitech/technicalTest/coach-training-simulator/src/services/aiService.js)
+#### [NEW] [aiService.js](../src/services/aiService.js)
 - Wraps calls to the backend API proxy (which calls OpenAI)
 - Two main functions:
   - `simulateClient(markerContext, conversationHistory)` → realistic client response
@@ -87,7 +87,7 @@ Template for `OPENAI_API_KEY`.
 
 ### Backend API Proxy (`server/`)
 
-#### [NEW] [server.js](file:///home/epitech/technicalTest/coach-training-simulator/server/server.js)
+#### [NEW] [server.js](../server/server.js)
 - Express.js minimal server (proxy to avoid exposing API key in frontend)
 - `POST /api/simulate` → calls OpenAI for client simulation
 - `POST /api/evaluate` → calls OpenAI for response evaluation
@@ -98,43 +98,43 @@ Template for `OPENAI_API_KEY`.
 
 ### UI Layer (`src/`)
 
-#### [NEW] [index.html](file:///home/epitech/technicalTest/coach-training-simulator/index.html)
+#### [NEW] [index.html](../index.html)
 - Single page with tab navigation: **Dashboard** | **Training** | **Details**
 - Semantic HTML5 structure
 
-#### [NEW] [src/styles/main.css](file:///home/epitech/technicalTest/coach-training-simulator/src/styles/main.css)
+#### [NEW] [src/styles/main.css](../src/styles/main.css)
 - Design system: dark theme, CSS variables, Inter font
 - Glassmorphism cards, smooth transitions, radar chart styling
 - Responsive layout (works on 360px+)
 
-#### [NEW] [src/main.js](file:///home/epitech/technicalTest/coach-training-simulator/src/main.js)
+#### [NEW] [src/main.js](../src/main.js)
 - App entry point, initializes modules, sets up routing/tabs
 
-#### [NEW] [src/views/dashboard.js](file:///home/epitech/technicalTest/coach-training-simulator/src/views/dashboard.js)
+#### [NEW] [src/views/dashboard.js](../src/views/dashboard.js)
 - **Performance radar chart** (Canvas-based, no library) plotting all 9 markers
 - **Score cards** for each evaluated marker
 - **Gap analysis** — highlights missed markers with recommended actions
 - **Meeting summary** pulled from feedback field
 
-#### [NEW] [src/views/training.js](file:///home/epitech/technicalTest/coach-training-simulator/src/views/training.js)
+#### [NEW] [src/views/training.js](../src/views/training.js)
 - Step-by-step chat-like simulation interface
 - Shows current marker context (what's expected)
 - User types their sales pitch → AI responds as client
 - Real-time evaluation feedback after each marker
 - Progress bar showing markers completed
 
-#### [NEW] [src/views/details.js](file:///home/epitech/technicalTest/coach-training-simulator/src/views/details.js)
+#### [NEW] [src/views/details.js](../src/views/details.js)
 - Full marker breakdown with scores, comments, and transcript excerpts
 - Expandable sections per marker
 
-#### [NEW] [src/components/radarChart.js](file:///home/epitech/technicalTest/coach-training-simulator/src/components/radarChart.js)
+#### [NEW] [src/components/radarChart.js](../src/components/radarChart.js)
 - Vanilla Canvas radar/spider chart component
 - Plots marker scores on axes
 
-#### [NEW] [src/components/chatBubble.js](file:///home/epitech/technicalTest/coach-training-simulator/src/components/chatBubble.js)
+#### [NEW] [src/components/chatBubble.js](../src/components/chatBubble.js)
 - Reusable chat message component for the training simulation
 
-#### [NEW] [src/components/markerCard.js](file:///home/epitech/technicalTest/coach-training-simulator/src/components/markerCard.js)
+#### [NEW] [src/components/markerCard.js](../src/components/markerCard.js)
 - Card component showing marker score, status, and quick feedback
 
 ---

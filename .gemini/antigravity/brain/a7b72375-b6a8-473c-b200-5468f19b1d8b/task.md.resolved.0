@@ -1,0 +1,35 @@
+# Coach Training Simulator — Build Tasks
+
+## Planning
+- [x] Explore data structures ([sales-plan.json](file:///home/epitech/technicalTest/coach-training-simulator/sales-plan.json), [meeting-details.json](file:///home/epitech/technicalTest/coach-training-simulator/meeting-details.json))
+- [x] Understand the README vision (passive feedback → active training)
+- [/] Write implementation plan and get user approval
+
+## Execution — Project Setup
+- [ ] Initialize Vite + React project
+- [ ] Set up design system (CSS variables, fonts, base layout)
+- [ ] Set up project structure (modules, components, services)
+
+## Execution — Core Modules
+- [ ] Sales Plan Loader — parse and structure markers
+- [ ] Meeting Analyzer — extract performance gaps, missed/weak markers
+- [ ] Training Engine — orchestrate simulation session flow
+- [ ] Evaluation Layer — score user responses per marker
+
+## Execution — AI Integration
+- [ ] LLM integration service (OpenAI API)
+- [ ] Client persona simulation (realistic responses)
+- [ ] Response evaluation prompts
+
+## Execution — UI / Frontend
+- [ ] Dashboard — meeting performance overview + radar chart
+- [ ] Training session — step-by-step simulation interface
+- [ ] Marker detail — feedback, score, recommendations
+- [ ] Session results — post-training summary
+
+## Verification
+- [ ] Dev server runs without errors
+- [ ] All modules load data correctly
+- [ ] UI is responsive and visually polished
+- [ ] AI simulation flow works end-to-end
+- [ ] Write walkthrough
